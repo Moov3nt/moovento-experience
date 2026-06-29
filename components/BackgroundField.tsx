@@ -1,14 +1,14 @@
 "use client";
 
+import VisualEngine from "./VisualEngine/VisualEngine";
+import { useScene } from "./Scene/SceneContext";
+
 export default function BackgroundField() {
+  const { scene } = useScene();
+
   return (
-    <div
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "red",
-        zIndex: 999999,
-      }}
-    />
+    <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+      <VisualEngine scene={scene} />
+    </div>
   );
 }

@@ -61,7 +61,7 @@ export default function Network({
             stroke={COLORS.edge}
             strokeWidth={0.08}
             strokeLinecap="round"
-            opacity={config.edgeOpacity}
+            opacity={0.18}
             style={{
               transition:
                 "opacity 900ms ease-in-out",
