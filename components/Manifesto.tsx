@@ -1,91 +1,39 @@
-import Constellation from "./Constellation";
+"use client";
+
+import { useRef } from "react";
+
+import { useSceneObserver } from "./Scene/useSceneObserver";
 
 export default function Manifesto() {
+  const ref = useRef<HTMLElement>(null);
+
+  useSceneObserver(ref, "manifesto");
+
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div className="absolute left-1/2 top-1/2 h-[900px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#9DB36A]/5 blur-[180px]" />
-      </div>
+    <section
+      ref={ref}
+      className="relative min-h-screen flex items-center text-white"
+    >
+      <div className="mx-auto w-full max-w-6xl px-8 lg:px-16">
 
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col px-10 py-10">
+        <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
+          MANIFESTO
+        </span>
 
-        {/* Header */}
-        <header className="flex items-center justify-between">
+        <h2 className="mt-8 max-w-5xl text-[54px] leading-[1.02] tracking-[-0.04em] font-light md:text-[88px]">
+          Ogni territorio è una rete
+          <br />
+          di relazioni che produce
+          <br />
+          valore, ogni giorno.
+        </h2>
 
-          <div className="text-lg font-medium tracking-wide">
-            moovento
-          </div>
-
-          <button className="text-xs uppercase tracking-[0.35em] text-zinc-500 transition hover:text-white">
-            Contatti
-          </button>
-
-        </header>
-
-        {/* Content */}
-        <div className="grid flex-1 items-center gap-10 lg:grid-cols-[1.05fr_.95fr]">
-
-          {/* Left */}
-
-          <div className="relative z-20 max-w-3xl">
-
-            <p className="mb-12 text-[11px] uppercase tracking-[0.45em] text-[#9DB36A]">
-              MAKING THE INVISIBLE VALUABLE
-            </p>
-
-            <h1 className="text-[68px] font-light leading-[0.90] tracking-[-0.05em] lg:text-[108px]">
-
-              <span className="block">Rendere</span>
-
-              <span className="block">visibile</span>
-
-              <span className="block">il valore</span>
-
-              <span className="block">invisibile.</span>
-
-            </h1>
-
-            <p className="mt-14 max-w-md text-lg leading-8 text-zinc-400">
-
-              Osserviamo le relazioni che rendono
-              possibile il movimento.
-
-            </p>
-
-            <button className="group mt-16 flex items-center gap-3 text-lg font-light">
-
-              <span>Inizia il percorso</span>
-
-              <span className="transition duration-300 group-hover:translate-x-2">
-
-                →
-
-              </span>
-
-            </button>
-
-          </div>
-
-          {/* Right */}
-
-          <div className="relative flex h-[700px] items-center justify-center">
-
-            <Constellation />
-
-          </div>
-
-        </div>
-
-        {/* Footer */}
-
-        <footer className="flex justify-between pb-2 text-[10px] uppercase tracking-[0.45em] text-zinc-600">
-
-          <span>Scroll</span>
-
-          <span>v0.2</span>
-
-        </footer>
+        <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
+          Persone, luoghi, servizi, eventi e mobilità non
+          sono elementi isolati. È il modo in cui si
+          connettono che genera opportunità, criticità
+          e nuove possibilità.
+        </p>
 
       </div>
     </section>

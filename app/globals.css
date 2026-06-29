@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html{
+
+  background:#050505;
+  
+  scroll-behavior:smooth;
+  
+  }
+  
+  body{
+  
+  background:#050505;
+  
+  color:#ECE7DF;
+  
+  font-feature-settings:"ss01" on;
+  
+  text-rendering:optimizeLegibility;
+  
+  -webkit-font-smoothing:antialiased;
+  
+  overflow-x:hidden;
+  
+  }
+  
+  section{
+  
+  position:relative;
+  
+  }
