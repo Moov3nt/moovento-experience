@@ -1,5 +1,9 @@
 import type { Edge } from "./Types";
-
+export type NavigationState = {
+  currentHub: number;
+  previousHub: number;
+  currentEdge: number;
+};
 export type GraphNavigator = {
   connectedEdges(
     hub: number,
