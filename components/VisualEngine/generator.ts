@@ -14,12 +14,12 @@ type Cluster = {
 };
 
 const CLUSTERS: Cluster[] = [
-  { x: 18, y: 22 },
-  { x: 38, y: 70 },
-  { x: 60, y: 34 },
-  { x: 72, y: 62 },
-  { x: 84, y: 24 },
-  { x: 88, y: 82 },
+  { x: 26, y: 28 }, // dominante
+  { x: 42, y: 66 },
+  { x: 58, y: 40 },
+  { x: 74, y: 64 },
+  { x: 82, y: 28 },
+  { x: 66, y: 76 },
 ];
 
 function randomDepth(index: number): "far" | "mid" | "near" {
@@ -50,7 +50,7 @@ function createHubs(multiplier: number): Hub[] {
 
       const distance =
         hash(ENGINE.seed, id * 17) *
-        5;
+        2.5;
 
       hubs.push({
         id,
@@ -65,8 +65,8 @@ function createHubs(multiplier: number): Hub[] {
 
         radius:
           clusterIndex === 0 && i === 0
-            ? 1.6
-            : 0.8,
+            ? 1.35
+            : 0.65,
 
         dominant:
           clusterIndex === 0 && i === 0,

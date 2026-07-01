@@ -1,20 +1,17 @@
 "use client";
 
-import {
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-
+import { useMemo } from "react";
 import Background from "./Background";
 import Network from "./Network";
 import Stars from "./Stars";
 import PulseRenderer from "./PulseRenderer";
-
 import { generateScene } from "./generator";
 import { SCENES } from "./scenes";
-
 import type { Scene } from "../Scene/SceneContext";
+import { usePulseEngine } from "./engine/usePulseEngine";
+import { useHubEnergy } from "./engine/useHubEnergy";
+import { useNetworkBreath } from "./engine/useNetworkBreath";
+import PulseTrail from "./PulseTrail";
 
 type Props = {
   scene: Scene;
@@ -32,51 +29,19 @@ export default function VisualEngine({
     [],
   );
 
-  const [pulse, setPulse] =
-  useState({
-    edgeIndex: 0,
-    progress: 0,
-  });
+  const pulse = usePulseEngine(
+    graph.edges,
+  );
 
-  useEffect(() => {
-    let frame: number;
-  
-    const animate = () => {
-      setPulse((current) => {
-        let progress =
-          current.progress + 0.003;
-  
-        let edgeIndex =
-          current.edgeIndex;
-  
-        if (progress >= 1) {
-          progress = 0;
-  
-          edgeIndex =
-            (edgeIndex + 1) %
-            graph.edges.length;
-        }
-  
-        return {
-          edgeIndex,
-          progress,
-        };
-      });
-  
-      frame =
-        requestAnimationFrame(
-          animate,
-        );
-    };
-  
-    frame =
-      requestAnimationFrame(
-        animate,
-      );
-  
-    return () =>
-      cancelAnimationFrame(frame);
-  }, [graph]);
+  const breath = useNetworkBreath();
+
+  const activeHub =
+  graph.edges[pulse.edgeIndex]?.to ?? -1;
+
+  const energy = useHubEnergy(
+  graph.hubs.length,
+  activeHub,
+  );
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -101,14 +66,23 @@ export default function VisualEngine({
           hubs={graph.hubs}
           edges={graph.edges}
           config={config}
+          energy={energy}
+          breath={breath}
         />
 
-      <PulseRenderer
-        hubs={graph.hubs}
-        edges={graph.edges}
-        edgeIndex={pulse.edgeIndex}
-        progress={pulse.progress}
-      />
+        <PulseTrail
+          hubs={graph.hubs}
+          edges={graph.edges}
+          edgeIndex={pulse.edgeIndex}
+          progress={pulse.progress}
+        />
+
+        <PulseRenderer
+          hubs={graph.hubs}
+          edges={graph.edges}
+          edgeIndex={pulse.edgeIndex}
+          progress={pulse.progress}
+        />
           
             </svg>
     </div>

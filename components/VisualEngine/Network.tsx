@@ -1,20 +1,25 @@
 "use client";
 
 import { COLORS, ENGINE } from "./constants";
-import type { Edge, Hub } from "./Types";
+import type { Edge, Hub } from "./types";
 import type { SceneConfig } from "./scenes";
 
 type Props = {
   hubs: Hub[];
   edges: Edge[];
   config: SceneConfig;
+  energy: number[];
+  breath: number;
 };
 
 export default function Network({
   hubs,
   edges,
   config,
+  energy,
+  breath,
 }: Props) {
+  
   const hubMap = new Map(
     hubs.map((hub) => [hub.id, hub]),
   );
@@ -59,9 +64,17 @@ export default function Network({
             x2={to.x}
             y2={to.y}
             stroke={COLORS.edge}
-            strokeWidth={0.08}
+            strokeWidth={
+                edge.primary
+                  ? 0.16
+                  : 0.10
+            }
             strokeLinecap="round"
-            opacity={0.18}
+            opacity={
+                  edge.primary
+                  ? 0.20
+                  : 0.12
+            }
             style={{
               transition:
                 "opacity 900ms ease-in-out",
@@ -70,26 +83,36 @@ export default function Network({
         );
       })}
 
-      {/* GLOW */}
+     {/* GLOW */}
 
-      {hubs.map((hub) => (
-        <circle
-          key={`glow-${hub.id}`}
-          cx={hub.x}
-          cy={hub.y}
-          r={
-            hub.dominant
-              ? ENGINE.glowRadius
-              : ENGINE.glowRadius * 0.55
-          }
-          fill="url(#hubGlow)"
-          opacity={config.glow}
-          style={{
-            transition:
-              "opacity 900ms ease-in-out",
-          }}
-        />
-      ))}
+{hubs.map((hub) => {
+  const e = energy[hub.id] ?? 0;
+
+  const base =
+    hub.dominant
+      ? ENGINE.glowRadius
+      : ENGINE.glowRadius * 0.55;
+
+  return (
+    <g key={`glow-${hub.id}`}>
+      <circle
+        cx={hub.x}
+        cy={hub.y}
+        r={base * (1.8 + e * 0.6)}
+        fill={COLORS.glow}
+        opacity={0.015 + breath * 0.015 + e * 0.03}
+      />
+
+      <circle
+        cx={hub.x}
+        cy={hub.y}
+        r={base * (1.15 + e * 0.35)}
+        fill={COLORS.glow}
+        opacity={0.045 + breath * 0.025 + e * 0.06}
+      />
+    </g>
+  );
+})}
 
       {/* HUBS */}
 

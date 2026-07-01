@@ -15,7 +15,7 @@ export const COLORS = {
   star: "#F5F5F0",
   hub: "#C4D39A",
   glow: "#C4D39A",
-  edge: "rgba(255,255,255,.07)",
+  edge: "rgba(190,200,165,0.20)",
 };
 
 export const DEPTH = {

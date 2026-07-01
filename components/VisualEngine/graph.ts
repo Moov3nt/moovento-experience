@@ -17,6 +17,7 @@ export function buildGraph(hubs: Hub[]): Edge[] {
     edges.push({
       from: a,
       to: b,
+      primary: false,
     });
   }
 
@@ -64,6 +65,24 @@ export function buildGraph(hubs: Hub[]): Edge[] {
   }
 
   connect(pair[0], pair[1]);
+  // evidenzia le connessioni lunghe
 
+edges.forEach((edge) => {
+  const from = hubs.find(
+    (h) => h.id === edge.from,
+  );
+
+  const to = hubs.find(
+    (h) => h.id === edge.to,
+  );
+
+  if (!from || !to) return;
+
+  const d = distance(from, to);
+
+  if (d > 22) {
+    edge.primary = true;
+  }
+});
   return edges;
 }
