@@ -1,10 +1,15 @@
 "use client";
 
-import { useMemo } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 import Background from "./Background";
-import Stars from "./Stars";
 import Network from "./Network";
+import Stars from "./Stars";
+import PulseRenderer from "./PulseRenderer";
 
 import { generateScene } from "./generator";
 import { SCENES } from "./scenes";
@@ -27,6 +32,52 @@ export default function VisualEngine({
     [],
   );
 
+  const [pulse, setPulse] =
+  useState({
+    edgeIndex: 0,
+    progress: 0,
+  });
+
+  useEffect(() => {
+    let frame: number;
+  
+    const animate = () => {
+      setPulse((current) => {
+        let progress =
+          current.progress + 0.003;
+  
+        let edgeIndex =
+          current.edgeIndex;
+  
+        if (progress >= 1) {
+          progress = 0;
+  
+          edgeIndex =
+            (edgeIndex + 1) %
+            graph.edges.length;
+        }
+  
+        return {
+          edgeIndex,
+          progress,
+        };
+      });
+  
+      frame =
+        requestAnimationFrame(
+          animate,
+        );
+    };
+  
+    frame =
+      requestAnimationFrame(
+        animate,
+      );
+  
+    return () =>
+      cancelAnimationFrame(frame);
+  }, [graph]);
+
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       <svg
@@ -35,7 +86,8 @@ export default function VisualEngine({
         className="w-full h-full"
         style={{
           opacity: config.opacity,
-          transition: "opacity 1200ms ease-in-out",
+          transition:
+            "opacity 1200ms ease-in-out",
         }}
       >
         <Background />
@@ -50,7 +102,15 @@ export default function VisualEngine({
           edges={graph.edges}
           config={config}
         />
-      </svg>
+
+      <PulseRenderer
+        hubs={graph.hubs}
+        edges={graph.edges}
+        edgeIndex={pulse.edgeIndex}
+        progress={pulse.progress}
+      />
+          
+            </svg>
     </div>
   );
 }
