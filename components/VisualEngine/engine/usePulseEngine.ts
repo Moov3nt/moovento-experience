@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import {
+  useEffect,
+  useState,
+} from "react";
 
 import type { Edge } from "../types";
+import type { GraphNavigator } from "../navigator";
 
 export type PulseState = {
   edgeIndex: number;
@@ -11,6 +15,7 @@ export type PulseState = {
 
 export function usePulseEngine(
   edges: Edge[],
+  _navigator: GraphNavigator,
 ) {
   const [pulse, setPulse] =
     useState<PulseState>({

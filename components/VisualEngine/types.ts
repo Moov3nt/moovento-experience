@@ -23,11 +23,13 @@ export type Point = {
   export type Edge = {
     from: number
     to: number
-  
+    primary?: boolean;
   }
   
   export type VisualScene = {
     stars: Star[]
     hubs: Hub[]
     edges: Edge[]
+    import type { GraphNavigator } from "./navigator";
+    navigator: GraphNavigator;
   }

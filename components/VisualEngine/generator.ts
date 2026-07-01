@@ -1,6 +1,7 @@
 import { ENGINE, DEPTH } from "./constants";
 import { hash, lerp } from "./math";
 import { buildGraph } from "./graph";
+import { createNavigator } from "./navigator";
 
 import type {
   Star,
@@ -153,10 +154,11 @@ export function generateScene(
   );
 
   const edges = buildGraph(hubs);
-
+  const navigator = createNavigator(edges);
   return {
     hubs,
     stars,
     edges,
+    navigator,
   };
 }

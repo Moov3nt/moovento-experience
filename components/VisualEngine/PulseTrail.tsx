@@ -33,16 +33,46 @@ export default function PulseTrail({
     from.y +
     (to.y - from.y) * progress;
 
-  return (
-    <line
-      x1={from.x}
-      y1={from.y}
-      x2={x2}
-      y2={y2}
-      stroke={COLORS.glow}
-      strokeWidth={0.22}
-      strokeLinecap="round"
-      opacity={0.55}
-    />
-  );
+    return (
+        <>
+          <defs>
+            <linearGradient
+              id="pulseTrail"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop
+                offset="0%"
+                stopColor={COLORS.glow}
+                stopOpacity="0.65"
+              />
+      
+              <stop
+                offset="70%"
+                stopColor={COLORS.glow}
+                stopOpacity="0.28"
+              />
+      
+              <stop
+                offset="100%"
+                stopColor={COLORS.glow}
+                stopOpacity="0"
+              />
+            </linearGradient>
+          </defs>
+      
+          <line
+            x1={from.x}
+            y1={from.y}
+            x2={x2}
+            y2={y2}
+            stroke="url(#pulseTrail)"
+            strokeWidth={0.18}
+            strokeLinecap="round"
+            opacity={0.55}
+          />
+        </>
+      );
 }

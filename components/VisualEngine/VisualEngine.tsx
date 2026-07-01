@@ -12,6 +12,8 @@ import { usePulseEngine } from "./engine/usePulseEngine";
 import { useHubEnergy } from "./engine/useHubEnergy";
 import { useNetworkBreath } from "./engine/useNetworkBreath";
 import PulseTrail from "./PulseTrail";
+import NodeFlash from "./NodeFlash";
+import { useEventEngine } from "./engine/useEventEngine";
 
 type Props = {
   scene: Scene;
@@ -42,6 +44,8 @@ export default function VisualEngine({
   graph.hubs.length,
   activeHub,
   );
+
+  const { flashHub } = useEventEngine(activeHub);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -75,6 +79,11 @@ export default function VisualEngine({
           edges={graph.edges}
           edgeIndex={pulse.edgeIndex}
           progress={pulse.progress}
+        />
+
+        <NodeFlash
+          hubs={graph.hubs}
+          activeHub={flashHub}
         />
 
         <PulseRenderer
