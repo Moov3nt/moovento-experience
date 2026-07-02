@@ -23,21 +23,25 @@ export default function PlatformSection() {
           <div>
 
             <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-              LA PIATTAFORMA
+              COME FUNZIONA
             </span>
 
             <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-              Una piattaforma
+              Comprendere significa
               <br />
-              che rende leggibile
+              mettere
               <br />
-              un ecosistema.
+              in relazione.
             </h2>
 
             <p className="mt-14 max-w-xl text-xl leading-relaxed text-neutral-400">
-              Moovento osserva persone, luoghi,
-              mobilità, eventi e servizi come
-              parti dello stesso sistema.
+              Moovento osserva sistemi complessi
+              mettendo in relazione
+              persone, servizi, infrastrutture,
+              mobilità ed eventi,
+              trasformando dati dispersi in una
+              visione unica,
+              leggibile e utile alle decisioni.
             </p>
 
           </div>
@@ -50,10 +54,10 @@ export default function PlatformSection() {
 
               {[
                 "Persone",
-                "Luoghi",
+                "Servizi",
+                "Infrastrutture",
                 "Mobilità",
                 "Eventi",
-                "Servizi",
               ].map((item) => (
                 <div
                   key={item}
@@ -76,8 +80,9 @@ export default function PlatformSection() {
         <div className="mt-32 border-t border-white/10 pt-14">
 
           <p className="max-w-4xl text-3xl leading-relaxed text-neutral-300">
-            Le connessioni trasformano informazioni
-            disperse in una visione condivisa del territorio.
+            Le relazioni rendono 
+            comprensibili 
+            i sistemi complessi.
           </p>
 
         </div>

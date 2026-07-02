@@ -8,6 +8,7 @@ import type {
   Hub,
   VisualScene,
 } from "./Types";
+import { buildAdjacency } from "./graphData";
 
 type Cluster = {
   x: number;
@@ -154,11 +155,13 @@ export function generateScene(
   );
 
   const edges = buildGraph(hubs);
+  const adjacency = buildAdjacency(edges);
   const navigator = createNavigator(edges);
   return {
     hubs,
     stars,
     edges,
     navigator,
+    adjacency,
   };
 }

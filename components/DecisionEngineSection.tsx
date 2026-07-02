@@ -21,27 +21,36 @@ export default function DecisionEngineSection() {
         <div>
 
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            DECISION ENGINE
+            SUPPORTO ALLE DECISIONI
           </span>
 
           <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Una decisione
+            Le decisioni
             <br />
-            non nasce
+            migliori
             <br />
-            da un dato.
+            nascono da una
+            <br />
+            comprensione
+            <br />
+            migliore.
           </h2>
 
           <p className="mt-12 max-w-xl text-xl leading-relaxed text-neutral-400">
-            Moovento osserva continuamente ciò che cambia
-            nel territorio.
+            Moovento trasforma l'osservazione 
+            continua del territorio
+            in una comprensione dinamica del
+            sistema, aiutando a
+            valutare scenari e impatti con 
+            maggiore consapevolezza.
           </p>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-neutral-500">
-            Quando una relazione modifica l'equilibrio
-            dell'ecosistema, la piattaforma rende
-            immediatamente leggibili le connessioni
-            più rilevanti.
+            Quando una relazione modifica 
+            l'equilibrio del sistema,
+            Moovento evidenzia le connessioni più
+            rilevanti e ne rende
+            comprensibili i possibili effetti.
           </p>
 
         </div>
@@ -53,7 +62,7 @@ export default function DecisionEngineSection() {
           <div className="w-full max-w-xl rounded-[36px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl">
 
             <div className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-              Nuova correlazione rilevata
+              Scenario aggiornato
             </div>
 
             <h3 className="mt-5 text-4xl font-light">
@@ -94,7 +103,7 @@ export default function DecisionEngineSection() {
                 </span>
 
                 <span className="text-[#C4D39A]">
-                  Potenziare il trasporto locale
+                  Valutare un incremento del servizio
                 </span>
               </div>
 
@@ -103,17 +112,20 @@ export default function DecisionEngineSection() {
             <div className="mt-14 border-t border-white/10 pt-10">
 
               <p className="leading-relaxed text-neutral-400">
-                La piattaforma suggerisce di aumentare
-                la frequenza del trasporto pubblico
-                nelle fasce orarie di maggiore affluenza.
+                L'analisi evidenzia che un incremento
+                della frequenza 
+                del trasporto pubblico nelle fasce orarie di 
+                maggiore affluenza
+                potrebbe migliorare l'equilibrio del 
+                sistema.
               </p>
 
             </div>
 
           </div>
-
+          
         </div>
-
+        
       </div>
     </section>
   );

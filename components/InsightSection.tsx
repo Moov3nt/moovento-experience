@@ -21,22 +21,24 @@ export default function InsightSection() {
         <div>
 
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            INSIGHT
+            LEGGERE IL TERRITORIO
           </span>
 
           <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Quando le
+            Ogni relazione
             <br />
-            relazioni
+            racconta
             <br />
-            diventano
+            ciò che un dato,
             <br />
-            visibili...
+            da solo,
+            <br />
+            non può rivelare.
           </h2>
 
-          <p className="mt-12 max-w-md text-xl leading-relaxed text-neutral-400">
-            Il territorio inizia a vedere ciò che prima
-            era soltanto rumore.
+          <p className="mt-12 max-w-md text-2xl leading-relaxed text-neutral-400">
+            Rendere leggibili le relazioni significa rendere
+            visibili nuove possibilità.
           </p>
 
         </div>
@@ -52,7 +54,7 @@ export default function InsightSection() {
               <div>
 
                 <div className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-                  Evento
+                  Scenario
                 </div>
 
                 <h3 className="mt-3 text-5xl font-light">
@@ -61,18 +63,24 @@ export default function InsightSection() {
 
               </div>
 
+              <div className="text-right">
+                <div className="text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+                  Impatto
+                </div>
+
               <div className="rounded-full bg-[#C4D39A]/10 px-5 py-2 text-xl text-[#C4D39A]">
-                +24%
+              +24%
               </div>
+            </div>
 
             </div>
 
             <div className="mt-14 space-y-8">
 
               {[
-                ["Affluenza prevista", 84],
-                ["Mobilità sostenibile", 67],
-                ["Coinvolgimento attività", 91],
+                ["Capacità della rete", 84],
+                ["Distribuzione dei flussi", 67],
+                ["Impatto sul territorio", 91],
               ].map(([label, value]) => (
 
                 <div key={String(label)}>

@@ -19,23 +19,34 @@ export default function CTASection() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-8 text-center">
 
         <span className="text-[11px] uppercase tracking-[0.45em] text-[#87996A]">
-          IL PROSSIMO PASSO
+          INIZIAMO
         </span>
 
         <h2 className="mt-10 text-5xl font-light leading-[1.02] tracking-[-0.04em] md:text-8xl">
-          Ogni territorio
+          Le decisioni 
           <br />
-          possiede già
+          restano
           <br />
-          le proprie relazioni.
+          umane.
         </h2>
 
-        <p className="mx-auto mt-12 max-w-2xl text-xl leading-9 text-white/45">
-          Non aggiungiamo complessità.
+        <p className="mx-auto mt-14 max-w-4xl text-xl leading-9 text-white/45">
+          Moovento rende più chiaro
           <br />
-          Rendiamo leggibile quella che esiste già.
+          ciò che conta davvero.
         </p>
 
+        <p className="mx-auto mt-12 max-w-3xl text-lg leading-8 text-white/55">
+
+          Ogni organizzazione affronta sfide diverse.
+          <br />
+           Ogni territorio racconta una storia diversa.
+          <br />
+          <br />
+          Per questo crediamo che ogni percorso
+          debba iniziare da una conversazione.
+
+        </p>
         <div className="mt-24">
 
           <button
@@ -58,7 +69,16 @@ export default function CTASection() {
           </button>
 
         </div>
+        <div className="mt-24">
 
+        <p className="text-[10px] uppercase tracking-[0.45em] text-white/25">
+
+          OSSERVARE · COMPRENDERE · METTERE IN RELAZIONE ·
+          SCOPRIRE · DECIDERE · INFLUENZARE
+
+        </p>
+
+      </div>
       </div>
     </section>
   );
