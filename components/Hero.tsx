@@ -17,20 +17,6 @@ export default function Hero() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/35" />
 
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-10 py-8">
-        <span className="text-xl font-semibold tracking-tight">
-          moovento
-        </span>
-
-        <a
-          href="#contatti"
-          className="text-xs uppercase tracking-[0.35em] text-neutral-400 transition-colors hover:text-white"
-        >
-          Contatti
-        </a>
-      </header>
-
       {/* Hero Content */}
       <div className="relative z-10 flex h-full items-center">
         <div className="mx-auto w-full max-w-7xl px-10">

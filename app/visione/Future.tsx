@@ -10,7 +10,7 @@ export default function Future() {
           IL FUTURO
         </span>
 
-        <h2 className="mt-8 text-[56px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">
+        <h2 className="mt-8 text-[48px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">
           I sistemi che
           <br />
           comprenderanno meglio

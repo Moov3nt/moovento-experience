@@ -20,7 +20,7 @@ export default function Approach() {
         
         <>
   <p className="mt-12 max-w-3xl text-xl leading-relaxed text-neutral-300">
-    Moovento nasce da una convinzione semplice.
+    Il principio è semplice.
   </p>
 
   <p className="mt-8 max-w-3xl text-xl leading-relaxed text-neutral-500">
