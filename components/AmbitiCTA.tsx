@@ -25,11 +25,10 @@ export default function AmbitiCTA() {
         </p>
 
         <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/45">
-          Non partiamo dalla tecnologia.
+          Non partiamo da una soluzione predefinita.
           <br />
-          Partiamo dal tuo sistema,
-          dalle sue relazioni e dagli obiettivi
-          che vuoi raggiungere.
+          Partiamo da ciò che vuoi comprendere,
+          migliorare o trasformare.
         </p>
 
         <div className="mt-24">

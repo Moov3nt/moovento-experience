@@ -20,10 +20,11 @@ export default function MethodSection() {
         </h2>
 
         <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
-          Ogni sistema evolve continuamente.
-          Comprenderne le connessioni significa
-          leggere ciò che accade oggi e supportare
-          decisioni migliori per ciò che accadrà domani.
+          Ogni sistema evolve continuamente. Leggere
+          come un cambiamento si propaga significa
+          comprendere ciò che accade oggi e valutare
+          con maggiore consapevolezza ciò che può 
+          accadere domani.
         </p>
 
         <div className="mt-32">

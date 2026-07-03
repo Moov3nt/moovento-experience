@@ -91,9 +91,9 @@ export default function ImpactSection() {
         <div className="mt-24 max-w-4xl">
 
           <p className="text-3xl font-light leading-relaxed text-neutral-300">
-            Il valore non nasce dai dati.
+            Il valore emerge quando comprendere
             <br />
-            Nasce dalla capacità di comprenderne le relazioni.
+            diventa capacità di agire.
           </p>
 
         </div>

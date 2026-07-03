@@ -1,11 +1,11 @@
 "use client";
+
 import RelationGraph from "./RelationGraph";
+
 type Props = {
   title: string;
   description: string;
-  observe: string;
-  understand: string;
-  impact: string;
+  implication: string;
 
   graph: {
     center: string;
@@ -13,21 +13,22 @@ type Props = {
     left: string;
     right: string;
     bottom: string;
-    };
+  };
 };
 
 export default function ApplicationCard({
   title,
   description,
-  observe,
-  understand,
-  impact,
-  graph, 
+  implication,
+  graph,
 }: Props) {
   return (
     <div
       className="
         group
+        flex
+        h-full
+        flex-col
         rounded-[32px]
         border
         border-white/10
@@ -49,41 +50,13 @@ export default function ApplicationCard({
 
       <RelationGraph {...graph} />
 
-
-      <div className="mt-10 space-y-8">
-
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
-            OSSERVIAMO
-          </div>
-
-          <p className="mt-2 text-neutral-300">
-            {observe}
+      <div className="mt-auto pt-10">
+        <div className="border-t border-white/10 pt-8">
+          <p className="text-lg leading-relaxed text-neutral-300">
+            {implication}
           </p>
         </div>
-
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
-            COMPRENDIAMO
-          </div>
-
-          <p className="mt-2 text-neutral-300">
-            {understand}
-          </p>
-        </div>
-
-        <div>
-          <div className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
-            GENERIAMO
-          </div>
-
-          <p className="mt-2 text-white">
-            {impact}
-          </p>
-        </div>
-
       </div>
-
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function AmbitiHero() {
           AMBITI
         </span>
 
-        <h1 className="mt-8 max-w-5xl text-[56px] leading-[1.02] tracking-[-0.04em] font-light md:text-[88px]">
+        <h1 className="mt-8 max-w-5xl text-[56px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">
           Ogni sistema
           <br />
           complesso può
@@ -18,10 +18,11 @@ export default function AmbitiHero() {
         </h1>
 
         <p className="mt-14 max-w-3xl text-xl leading-relaxed text-neutral-400">
-          Il metodo Moovento si applica a contesti diversi
-          mantenendo lo stesso principio: rendere leggibili
-          le relazioni per supportare decisioni più
-          consapevoli.
+          Cambiano i contesti, le scale e le domande.
+          <br />
+          Resta la necessità di comprendere come le parti
+          <br />
+          di un sistema si influenzano tra loro.
         </p>
 
       </div>
