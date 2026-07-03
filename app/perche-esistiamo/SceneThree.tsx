@@ -1,40 +1,33 @@
 "use client";
 
-import Statement from "@/components/narrative/Statement";
 import Reveal from "@/components/Reveal";
+import Statement from "@/components/narrative/Statement";
+import Pause from "@/components/narrative/Pause";
 
 export default function SceneThree() {
   return (
-    <section className="min-h-[120vh] flex items-center">
-
-      <div className="mx-auto max-w-5xl px-8 lg:px-16">
+    <section className="relative min-h-[120vh] flex items-center">
+      <div className="mx-auto w-full max-w-6xl px-8 lg:px-16">
 
         <Reveal>
-
-          <p className="max-w-3xl text-2xl leading-relaxed text-neutral-400">
-
-            È stato lì che abbiamo capito
-            che il problema non era raccogliere
-            nuove informazioni.
-
+          <p className="max-w-3xl text-2xl leading-[1.55] text-neutral-400 md:text-3xl">
+            Abbiamo capito che il problema
+            <br />
+            non era avere più informazioni.
           </p>
-
         </Reveal>
 
-        <div className="mt-40">
+        <Pause />
 
-          <Statement delay={0.6}>
-
+        <div className="max-w-5xl">
+          <Statement delay={0.45}>
             Era
             <br />
             comprenderle.
-
           </Statement>
-
         </div>
 
       </div>
-
     </section>
   );
 }
