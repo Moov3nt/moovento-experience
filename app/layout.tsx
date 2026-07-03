@@ -17,9 +17,57 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moovento.it"),
-  title: "Moovento",
-  description: "Making the Invisible Valuable",
+  metadataBase: new URL("https://www.moovento.it"),
+
+  title: {
+    default: "Moovento | Rendere visibile il valore invisibile",
+    template: "%s | Moovento",
+  },
+
+  description:
+    "Moovento comprende le relazioni che muovono sistemi complessi per supportare decisioni più consapevoli, sostenibili e resilienti.",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "it_IT",
+    url: "/",
+    siteName: "Moovento",
+    title: "Moovento | Rendere visibile il valore invisibile",
+    description:
+      "Comprendiamo le relazioni che muovono sistemi complessi e rendiamo visibile il valore invisibile.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Moovento — Rendere visibile il valore invisibile",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Moovento | Rendere visibile il valore invisibile",
+    description:
+      "Comprendiamo le relazioni che muovono sistemi complessi e rendiamo visibile il valore invisibile.",
+    images: ["/opengraph-image"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
