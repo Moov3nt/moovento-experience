@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -18,9 +18,9 @@ export function useSimulation() {
       },
     ]);
 
-  const energy = [];
+  const energy: number[] = [];
 
-  const events = [];
+  const events: unknown[] = [];
 
   const breath = 0;
 
@@ -40,3 +40,4 @@ export function useSimulation() {
 
   };
 }
+

@@ -1,4 +1,4 @@
-import type { Edge } from "../types";
+﻿import type { Edge } from "../types";
 
 export class GraphNavigator {
   private readonly adjacency = new Map<
@@ -51,3 +51,5 @@ export class GraphNavigator {
     );
   }
 }
+
+

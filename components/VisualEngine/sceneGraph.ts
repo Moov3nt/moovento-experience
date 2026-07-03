@@ -1,4 +1,4 @@
-import type { Scene } from "../Scene/SceneContext";
+﻿import type { Scene } from "../Scene/SceneContext";
 
 export const GRAPH_DENSITY: Record<Scene, number> = {
   hero: 36,
@@ -8,3 +8,4 @@ export const GRAPH_DENSITY: Record<Scene, number> = {
   decision: 110,
   cta: 44,
 };
+

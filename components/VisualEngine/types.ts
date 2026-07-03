@@ -1,3 +1,5 @@
+﻿import type { GraphNavigator } from "./navigator";
+
 export type Point = {
     x: number
     y: number
@@ -27,9 +29,9 @@ export type Point = {
   }
   
   export type VisualScene = {
-    stars: Star[]
-    hubs: Hub[]
-    edges: Edge[]
-    import type { GraphNavigator } from "./navigator";
+    stars: Star[];
+    hubs: Hub[];
+    edges: Edge[];
     navigator: GraphNavigator;
-  }
+    adjacency: Map<number, number[]>;
+  };

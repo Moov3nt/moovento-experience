@@ -1,4 +1,4 @@
-import type { Edge } from "./Types";
+﻿import type { Edge } from "./types";
 export type NavigationState = {
   currentHub: number;
   previousHub: number;
@@ -74,3 +74,4 @@ export function createNavigator(
 
   };
 }
+

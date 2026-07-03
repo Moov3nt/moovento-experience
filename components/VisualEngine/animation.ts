@@ -1,4 +1,4 @@
-export type AnimationState = {
+﻿export type AnimationState = {
     time: number;
     delta: number;
   };
@@ -50,3 +50,4 @@ export type AnimationState = {
   
     return () => listeners.delete(listener);
   }
+

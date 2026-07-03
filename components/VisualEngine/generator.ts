@@ -1,4 +1,4 @@
-import { ENGINE, DEPTH } from "./constants";
+﻿import { ENGINE, DEPTH } from "./constants";
 import { hash, lerp } from "./math";
 import { buildGraph } from "./graph";
 import { createNavigator } from "./navigator";
@@ -7,7 +7,7 @@ import type {
   Star,
   Hub,
   VisualScene,
-} from "./Types";
+} from "./types";
 import { buildAdjacency } from "./graphData";
 
 type Cluster = {
@@ -165,3 +165,4 @@ export function generateScene(
     adjacency,
   };
 }
+

@@ -1,4 +1,4 @@
-import type { Hub, Edge } from "./Types";
+﻿import type { Hub, Edge } from "./types";
 import { distance } from "./math";
 
 export function buildGraph(hubs: Hub[]): Edge[] {
@@ -21,7 +21,7 @@ export function buildGraph(hubs: Hub[]): Edge[] {
     });
   }
 
-  // ogni hub si collega ai due più vicini
+  // ogni hub si collega ai due piÃ¹ vicini
 
   hubs.forEach((hub) => {
 
@@ -86,3 +86,4 @@ edges.forEach((edge) => {
 });
   return edges;
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function Background() {
   return (
@@ -38,3 +38,4 @@ export default function Background() {
     </>
   );
 }
+

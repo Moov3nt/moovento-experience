@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import type { Edge, Hub } from "./types";
 
@@ -60,3 +60,4 @@ export default function PulseRenderer({
     </>
   );
 }
+

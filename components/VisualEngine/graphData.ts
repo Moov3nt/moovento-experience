@@ -1,4 +1,4 @@
-import type { Edge } from "./Types";
+﻿import type { Edge } from "./types";
 
 export function buildAdjacency(
   edges: Edge[],
@@ -20,3 +20,4 @@ export function buildAdjacency(
 
   return map;
 }
+

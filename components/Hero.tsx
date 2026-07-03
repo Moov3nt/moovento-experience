@@ -35,23 +35,21 @@ export default function Hero() {
             MAKING THE INVISIBLE VALUABLE
           </p>
 
-          <h1 className="max-w-3xl text-[72px] font-light leading-[0.95] tracking-[-0.05em] md:text-[118px]">
-            Rendere
+          <h1 className="max-w-5xl text-[68px] font-light leading-[0.94] tracking-[-0.055em] md:text-[112px]">
+            Rendere visibile
             <br />
-            visibile
-            <br />
-            il valore
-            <br />
-            invisibile.
+            il valore invisibile.
           </h1>
 
-          <p className="mt-12 max-w-md text-lg leading-relaxed text-neutral-400">
-            Osserviamo le relazioni che rendono possibile il movimento.
+          <p className="mt-12 max-w-xl text-lg leading-relaxed text-neutral-400 md:text-xl">
+            Comprendiamo le relazioni
+            <br />
+            che muovono un sistema.
           </p>
 
-          <button className="mt-16 flex items-center gap-3 text-lg font-medium transition-all hover:gap-5">
-            Inizia il percorso
-            <span>→</span>
+          <button className="mt-16 flex items-center gap-4 text-sm uppercase tracking-[0.22em] text-white transition-all duration-500 hover:gap-6 hover:text-[#A8B68A]">
+            Scopri come
+            <span aria-hidden="true">→</span>
           </button>
         </div>
       </div>

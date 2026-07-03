@@ -1,4 +1,4 @@
-import type { Hub } from "./Types";
+﻿import type { Hub } from "./types";
 import { distance } from "./math";
 
 type Point = {
@@ -57,3 +57,4 @@ export function moveTowardsHub(
     y: point.y + (hub.y - point.y) * strength,
   };
 }
+

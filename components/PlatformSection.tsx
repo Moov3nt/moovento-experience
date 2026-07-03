@@ -15,13 +15,9 @@ export default function PlatformSection() {
       className="relative min-h-screen flex items-center text-white"
     >
       <div className="mx-auto w-full max-w-7xl px-8 lg:px-16">
-
         <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
-
           {/* LEFT */}
-
           <div>
-
             <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
               COME FUNZIONA
             </span>
@@ -35,23 +31,16 @@ export default function PlatformSection() {
             </h2>
 
             <p className="mt-14 max-w-xl text-xl leading-relaxed text-neutral-400">
-              Moovento osserva sistemi complessi
-              mettendo in relazione
-              persone, servizi, infrastrutture,
-              mobilità ed eventi,
-              trasformando dati dispersi in una
-              visione unica,
-              leggibile e utile alle decisioni.
+              Moovento connette ciò che normalmente viene osservato
+              separatamente. Persone, servizi, infrastrutture, mobilità
+              ed eventi diventano parte di una visione capace di rivelare
+              dipendenze, influenze e opportunità.
             </p>
-
           </div>
 
           {/* RIGHT */}
-
           <div className="flex items-center justify-center">
-
             <div className="space-y-8">
-
               {[
                 "Persone",
                 "Servizi",
@@ -70,23 +59,16 @@ export default function PlatformSection() {
                   </span>
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
 
-        <div className="mt-32 border-t border-white/10 pt-14">
-
-          <p className="max-w-4xl text-3xl leading-relaxed text-neutral-300">
-            Le relazioni rendono 
-            comprensibili 
-            i sistemi complessi.
+        <div className="mt-24 border-t border-white/10 pt-10">
+          <p className="max-w-3xl text-3xl leading-relaxed text-neutral-300">
+            È nelle connessioni che emerge ciò che,
+            isolatamente, resta invisibile.
           </p>
-
         </div>
-
       </div>
     </section>
   );

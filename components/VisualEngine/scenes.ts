@@ -1,4 +1,4 @@
-import type { Scene } from "../Scene/SceneContext";
+﻿import type { Scene } from "../Scene/SceneContext";
 
 export type SceneConfig = {
   density: number;
@@ -57,3 +57,4 @@ export const SCENES: Record<Scene, SceneConfig> = {
     pulse: 0.70,
   },
 };
+

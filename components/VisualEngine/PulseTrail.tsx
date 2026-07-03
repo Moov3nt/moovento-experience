@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { COLORS } from "./constants";
 import type { Edge, Hub } from "./types";
@@ -76,3 +76,4 @@ export default function PulseTrail({
         </>
       );
 }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   useEffect,
@@ -67,3 +67,5 @@ export function usePulseEngine(
 
   return pulse;
 }
+
+

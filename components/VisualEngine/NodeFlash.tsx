@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { COLORS } from "./constants";
 import type { Hub } from "./types";
@@ -28,3 +28,4 @@ export default function NodeFlash({
     />
   );
 }
+

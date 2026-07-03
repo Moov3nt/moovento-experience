@@ -1,4 +1,4 @@
-export type PulseArrivalEvent = {
+﻿export type PulseArrivalEvent = {
     hubId: number;
   };
   
@@ -35,3 +35,5 @@ export type PulseArrivalEvent = {
       );
     }
   }
+
+

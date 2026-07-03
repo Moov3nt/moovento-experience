@@ -1,4 +1,4 @@
-export type Pulse = {
+﻿export type Pulse = {
     id: number;
   
     fromHub: number;
@@ -10,3 +10,4 @@ export type Pulse = {
   
     speed: number;
   };
+

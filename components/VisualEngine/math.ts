@@ -1,4 +1,4 @@
-export function hash(seed: number, index: number): number {
+﻿export function hash(seed: number, index: number): number {
     const value =
       Math.sin(seed * 0.0137 + index * 12.9898) *
       43758.5453123
@@ -31,3 +31,4 @@ export function hash(seed: number, index: number): number {
   ) {
     return Math.min(max, Math.max(min, value))
   }
+

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useMemo } from "react";
 import Background from "./Background";
@@ -33,6 +33,7 @@ export default function VisualEngine({
 
   const pulse = usePulseEngine(
     graph.edges,
+    graph.navigator,
   );
 
   const breath = useNetworkBreath();
@@ -63,7 +64,7 @@ export default function VisualEngine({
 
         <Stars
           stars={graph.stars}
-          opacity={config.starOpacity}
+
         />
 
         <Network
@@ -97,3 +98,4 @@ export default function VisualEngine({
     </div>
   );
 }
+

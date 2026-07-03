@@ -1,4 +1,4 @@
-export const ENGINE = {
+﻿export const ENGINE = {
   seed: 42,
 
   width: 100,
@@ -34,3 +34,4 @@ export const DEPTH = {
     opacity: [0.18, 0.35],
   },
 };
+

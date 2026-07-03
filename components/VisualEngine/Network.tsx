@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { COLORS, ENGINE } from "./constants";
 import type { Edge, Hub } from "./types";
@@ -128,3 +128,4 @@ export default function Network({
     </>
   );
 }
+

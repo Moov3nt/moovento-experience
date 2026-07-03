@@ -1,4 +1,4 @@
-import type { Hub } from "../types";
+﻿import type { Hub } from "../types";
 
 type Pulse = {
   fromHub: number;
@@ -69,3 +69,5 @@ export class HubEnergy {
     );
   }
 }
+
+

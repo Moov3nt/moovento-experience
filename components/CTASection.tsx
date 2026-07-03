@@ -30,46 +30,26 @@ export default function CTASection() {
           umane.
         </h2>
 
-        <p className="mx-auto mt-14 max-w-4xl text-xl leading-9 text-white/45">
-          Moovento rende più chiaro
-          <br />
-          ciò che conta davvero.
+
+        <p className="mt-12 mx-auto max-w-xl text-center text-xl leading-relaxed text-neutral-400">
+        Ogni organizzazione affronta sfide diverse.
+        <br />
+        Ogni territorio racconta una storia diversa.
         </p>
 
-        <p className="mx-auto mt-12 max-w-3xl text-lg leading-8 text-white/55">
-
-          Ogni organizzazione affronta sfide diverse.
-          <br />
-           Ogni territorio racconta una storia diversa.
-          <br />
-          <br />
-          Per questo crediamo che ogni percorso
-          debba iniziare da una conversazione.
-
+      <p className="mt-8 mx-auto max-w-xl text-center text-lg leading-relaxed text-neutral-300">
+        Per questo ogni percorso
+        <br />
+        inizia da una conversazione.
         </p>
         <div className="mt-24">
 
-          <button
-            className="
-              rounded-full
-              border
-              border-[#87996A]
-              px-10
-              py-5
-              text-sm
-              uppercase
-              tracking-[0.35em]
-              transition-all
-              duration-500
-              hover:bg-[#87996A]
-              hover:text-black
-            "
-          >
-            Inizia una conversazione
-          </button>
+        <button className="mt-14 rounded-full border border-[#A8B68A]/50 px-10 py-5 text-[11px] uppercase tracking-[0.35em] text-white transition-all duration-300 hover:border-[#A8B68A] hover:bg-[#A8B68A]/10">
+  Inizia una conversazione
+</button>
 
         </div>
-        <div className="mt-24">
+        <div className="mt-14">
 
         <p className="text-[10px] uppercase tracking-[0.45em] text-white/25">
 

@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import type { Star } from "./Types";
+import type { Star } from "./types";
 
 type Props = {
   stars: Star[];
@@ -22,3 +22,4 @@ export default function Stars({ stars }: Props) {
     </>
   );
 }
+
