@@ -6,6 +6,8 @@ import BackgroundField from "../components/BackgroundField";
 import SceneProvider from "../components/Scene/SceneProvider";
 
 import SiteHeader from "../components/SiteHeader"
+import { Analytics } from "@vercel/analytics/next";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -92,6 +94,8 @@ export default function RootLayout({
             {children}
           </main>
         </SceneProvider>
+
+        <Analytics />
       </body>
     </html>
   );
