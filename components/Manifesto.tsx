@@ -11,6 +11,7 @@ export default function Manifesto() {
 
   return (
     <section
+      id="manifesto"
       ref={ref}
       className="relative min-h-screen flex items-center text-white"
     >

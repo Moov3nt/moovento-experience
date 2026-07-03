@@ -23,9 +23,12 @@ export default function Hero() {
           moovento
         </span>
 
-        <button className="text-xs uppercase tracking-[0.35em] text-neutral-400 transition-colors hover:text-white">
+        <a
+          href="#contatti"
+          className="text-xs uppercase tracking-[0.35em] text-neutral-400 transition-colors hover:text-white"
+        >
           Contatti
-        </button>
+        </a>
       </header>
 
       {/* Hero Content */}
@@ -35,22 +38,25 @@ export default function Hero() {
             MAKING THE INVISIBLE VALUABLE
           </p>
 
-          <h1 className="max-w-5xl text-[68px] font-light leading-[0.94] tracking-[-0.055em] md:text-[112px]">
+          <h1 className="max-w-5xl text-[72px] font-light leading-[0.95] tracking-[-0.05em] md:text-[118px]">
             Rendere visibile
             <br />
             il valore invisibile.
           </h1>
 
-          <p className="mt-12 max-w-xl text-lg leading-relaxed text-neutral-400 md:text-xl">
+          <p className="mt-12 max-w-md text-lg leading-relaxed text-neutral-400">
             Comprendiamo le relazioni
             <br />
             che muovono un sistema.
           </p>
 
-          <button className="mt-16 flex items-center gap-4 text-sm uppercase tracking-[0.22em] text-white transition-all duration-500 hover:gap-6 hover:text-[#A8B68A]">
+          <a
+            href="#manifesto"
+            className="mt-16 flex w-fit items-center gap-3 text-[11px] font-medium uppercase tracking-[0.25em] transition-all hover:gap-5"
+          >
             Scopri come
-            <span aria-hidden="true">→</span>
-          </button>
+            <span>→</span>
+          </a>
         </div>
       </div>
 
