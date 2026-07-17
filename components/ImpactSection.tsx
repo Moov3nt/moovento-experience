@@ -45,9 +45,9 @@ export default function ImpactSection() {
         </h2>
 
         <p className="mt-10 max-w-2xl text-xl leading-relaxed text-neutral-400">
-          Quando le relazioni diventano leggibili, le decisioni
-          possono diventare azioni coordinate. Gli esiti osservati
-          mostrano che cosa ha generato valore e che cosa va compreso meglio.
+          Contesti diversi pongono la stessa domanda:
+          che cosa cambia quando una decisione diventa azione?
+          Gli esiti mostrano il valore generato e ciò che va compreso meglio.
         </p>
 
         <div className="mt-24 border-t border-white/10">

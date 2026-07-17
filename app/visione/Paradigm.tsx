@@ -17,7 +17,7 @@ export default function Paradigm() {
         </h2>
 
         <p className="mt-12 max-w-3xl text-xl leading-relaxed text-neutral-400">
-          Quando un sistema viene compreso,
+          Quando le connessioni diventano leggibili,
           ciò che accade può essere valutato,
           governato e trasformato in azione consapevole.
         </p>

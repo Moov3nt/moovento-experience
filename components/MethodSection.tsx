@@ -10,13 +10,13 @@ export default function MethodSection() {
         </span>
 
         <h2 className="mt-8 max-w-5xl text-[56px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">
-          Moovento non analizza
+          Ambiti diversi.
           <br />
-          elementi isolati.
+          Un principio comune.
           <br />
-          Osserva le relazioni
+          Comprendere le relazioni
           <br />
-          che li collegano.
+          per governare ciò che cambia.
         </h2>
 
         <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">

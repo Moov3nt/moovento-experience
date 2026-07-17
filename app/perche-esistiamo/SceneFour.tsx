@@ -39,11 +39,13 @@ export default function SceneFour() {
 
         <div className="max-w-5xl">
           <Statement delay={1}>
-            Per unire comprensione,
+            Da quella visione
             <br />
-            responsabilità
+            è nata Moovento.
             <br />
-            e azione.
+            Non per semplificare,
+            <br />
+            ma per agire con responsabilità.
           </Statement>
         </div>
 
