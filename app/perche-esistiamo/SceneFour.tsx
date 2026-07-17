@@ -31,7 +31,7 @@ export default function SceneFour() {
           <p className="max-w-3xl text-2xl leading-[1.55] text-neutral-400 md:text-3xl">
             Un modo per comprendere relazioni,
             <br />
-            dipendenze e influenze.
+            dipendenze e influenze nel tempo.
           </p>
         </Reveal>
 
@@ -39,11 +39,11 @@ export default function SceneFour() {
 
         <div className="max-w-5xl">
           <Statement delay={1}>
-            Da quella visione
+            Per unire comprensione,
             <br />
-            è nata
+            responsabilità
             <br />
-            Moovento.
+            e azione.
           </Statement>
         </div>
 

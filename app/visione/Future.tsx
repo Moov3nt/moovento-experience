@@ -23,13 +23,13 @@ export default function Future() {
         </h2>
 
         <p className="mt-16 max-w-3xl text-xl leading-relaxed text-neutral-400">
-          Non perché avranno più dati.
+          Non perché avranno soltanto più dati.
         </p>
 
         <p className="mt-8 max-w-3xl text-3xl font-light leading-relaxed text-white">
-          Perché avranno una
+          Perché sapranno trasformare
           <br />
-          comprensione migliore.
+          ogni esperienza in comprensione condivisa.
         </p>
 
       </div>

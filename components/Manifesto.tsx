@@ -34,15 +34,15 @@ export default function Manifesto() {
         <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
           Ogni giorno persone, servizi, infrastrutture, eventi e mobilità
           generano milioni di connessioni. Queste relazioni raccontano
-          come un sistema funziona, evolve e cambia.
+          come un sistema evolve e dove un cambiamento richiede attenzione.
           <br />
           <br />
           <strong className="font-medium text-white">
             Moovento nasce per renderle comprensibili.
           </strong>
           <br />
-          Per trasformare la complessità in una visione capace di
-          supportare decisioni migliori.
+          Per trasformare ciò che accade in evidenze condivise,
+          capaci di guidare decisioni responsabili e azioni coordinate.
         </p>
       </div>
     </section>

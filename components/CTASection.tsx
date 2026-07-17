@@ -32,15 +32,15 @@ export default function CTASection() {
 
           <div className="mt-14 text-center text-xl leading-relaxed text-neutral-400">
             <p>
-              Ogni organizzazione affronta sfide diverse.
+              Ogni organizzazione governa cambiamenti diversi.
               <br />
-              Ogni territorio racconta una storia diversa.
+              Ogni decisione coinvolge responsabilità e risultati diversi.
             </p>
 
             <p className="mt-8">
-              Per questo ogni percorso
+              Per questo partiamo dal tuo sistema,
               <br />
-              inizia da una conversazione.
+              da ciò che sta evolvendo e da ciò che vuoi comprendere.
             </p>
           </div>
 

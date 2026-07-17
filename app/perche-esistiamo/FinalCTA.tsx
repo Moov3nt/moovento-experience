@@ -23,9 +23,9 @@ export default function FinalCTA() {
 
         <Reveal delay={0.55}>
           <p className="mt-16 max-w-2xl text-xl leading-[1.6] text-neutral-400 md:text-2xl">
-            Osserviamo ciò che accade.
+            Comprendiamo ciò che sta evolvendo.
             <br />
-            Comprendiamo ciò che lo influenza.
+            Chi può agire. Quale risultato conta.
           </p>
         </Reveal>
 

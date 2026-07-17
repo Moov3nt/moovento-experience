@@ -6,25 +6,25 @@ export default function ImpactSection() {
       number: "01",
       title: "Efficienza operativa",
       description:
-        "Ridurre sprechi, migliorare il coordinamento e utilizzare le risorse in modo più efficace.",
+        "Comprendere se il coordinamento delle azioni migliora l'uso delle risorse e riduce gli sprechi.",
     },
     {
       number: "02",
       title: "Decisioni più consapevoli",
       description:
-        "Comprendere gli effetti delle scelte prima di intervenire, valutando scenari e relazioni.",
+        "Collegare le evidenze alle scelte, alle responsabilità e ai risultati che ne derivano.",
     },
     {
       number: "03",
       title: "Sostenibilità",
       description:
-        "Bilanciare mobilità, servizi e territorio per generare valore duraturo per comunità e ambiente.",
+        "Valutare nel tempo come mobilità, servizi e territorio contribuiscono al valore per comunità e ambiente.",
     },
     {
       number: "04",
       title: "Reputazione",
       description:
-        "Offrire esperienze migliori a cittadini, visitatori e stakeholder rafforzando l'identità del territorio.",
+        "Rendere comprensibili le decisioni e osservare come i loro esiti influenzano fiducia ed esperienza.",
     },
   ];
 
@@ -46,8 +46,8 @@ export default function ImpactSection() {
 
         <p className="mt-10 max-w-2xl text-xl leading-relaxed text-neutral-400">
           Quando le relazioni diventano leggibili, le decisioni
-          acquisiscono una nuova qualità: più consapevolezza,
-          maggiore coordinamento e risultati concreti.
+          possono diventare azioni coordinate. Gli esiti osservati
+          mostrano che cosa ha generato valore e che cosa va compreso meglio.
         </p>
 
         <div className="mt-24 border-t border-white/10">
@@ -91,9 +91,9 @@ export default function ImpactSection() {
         <div className="mt-24 max-w-4xl">
 
           <p className="text-3xl font-light leading-relaxed text-neutral-300">
-            Il valore emerge quando comprendere
+            Il valore emerge quando ogni risultato
             <br />
-            diventa capacità di agire.
+            torna ad alimentare la comprensione.
           </p>
 
         </div>

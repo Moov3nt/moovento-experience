@@ -31,9 +31,9 @@ export default function Hero() {
           Ogni nuovo servizio, infrastruttura, evento o
           flusso genera nuove relazioni.
           <br />
-          Comprenderle è ciò che distingue una
-          gestione operativa da una visione strategica
-          del sistema.
+          Seguirne l&apos;evoluzione permette di unire
+          ciò che accade oggi alle decisioni,
+          alle responsabilità e ai risultati di domani.
         </p>
 
       </div>

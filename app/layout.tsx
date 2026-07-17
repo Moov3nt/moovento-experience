@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Moovento comprende le relazioni che muovono sistemi complessi per supportare decisioni più consapevoli, sostenibili e resilienti.",
+    "Moovento comprende come evolvono i sistemi complessi per trasformare evidenze e relazioni in decisioni responsabili, azioni coordinate e apprendimento.",
 
   alternates: {
     canonical: "/",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Moovento",
     title: "Moovento | Rendere visibile il valore invisibile",
     description:
-      "Comprendiamo le relazioni che muovono sistemi complessi e rendiamo visibile il valore invisibile.",
+      "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
     images: [
       {
         url: "/opengraph-image",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Moovento | Rendere visibile il valore invisibile",
     description:
-      "Comprendiamo le relazioni che muovono sistemi complessi e rendiamo visibile il valore invisibile.",
+      "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
     images: ["/opengraph-image"],
   },
 

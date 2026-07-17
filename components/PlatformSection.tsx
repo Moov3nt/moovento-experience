@@ -33,8 +33,8 @@ export default function PlatformSection() {
             <p className="mt-14 max-w-xl text-xl leading-relaxed text-neutral-400">
               Moovento connette ciò che normalmente viene osservato
               separatamente. Persone, servizi, infrastrutture, mobilità
-              ed eventi diventano parte di una visione capace di rivelare
-              dipendenze, influenze e opportunità.
+              ed eventi diventano parte di una visione che segue come
+              relazioni, dipendenze e opportunità evolvono nel tempo.
             </p>
           </div>
 
@@ -65,8 +65,8 @@ export default function PlatformSection() {
 
         <div className="mt-24 border-t border-white/10 pt-10">
           <p className="max-w-3xl text-3xl leading-relaxed text-neutral-300">
-            È nelle connessioni che emerge ciò che,
-            isolatamente, resta invisibile.
+            Quando seguiamo le connessioni nel tempo,
+            emerge ciò che richiede una scelta.
           </p>
         </div>
       </div>

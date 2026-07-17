@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Ambiti",
   description:
-    "Il metodo Moovento rende leggibili le relazioni nei sistemi complessi: turismo, territori, mobilità, eventi, infrastrutture e servizi.",
+    "Moovento rende leggibili le relazioni nei sistemi complessi e collega decisioni, azioni e risultati in turismo, territori, mobilità, eventi, infrastrutture e servizi.",
 };
 
 export default function AmbitiPage() {

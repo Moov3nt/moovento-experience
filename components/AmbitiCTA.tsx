@@ -27,8 +27,8 @@ export default function AmbitiCTA() {
         <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-white/45">
           Non partiamo da una soluzione predefinita.
           <br />
-          Partiamo da ciò che vuoi comprendere,
-          migliorare o trasformare.
+          Partiamo da ciò che sta evolvendo,
+          da chi ne è responsabile e dal risultato che conta.
         </p>
 
         <div className="mt-24">
@@ -57,9 +57,9 @@ export default function AmbitiCTA() {
         <div className="mt-20">
 
           <p className="text-lg leading-relaxed text-neutral-500">
-            Comprendere un sistema
-            è il primo passo
-            per trasformarlo.
+            Comprendere un sistema è il primo passo.
+            <br />
+            Imparare da ogni azione è ciò che lo fa evolvere.
           </p>
 
         </div>

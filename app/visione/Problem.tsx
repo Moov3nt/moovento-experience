@@ -43,7 +43,8 @@ export default function Problem() {
 
           Quando queste connessioni restano invisibili,
           anche le decisioni più informate rischiano
-          di essere soltanto parziali.
+          di essere soltanto parziali. E ciò che segue
+          rischia di perdere direzione e responsabilità.
 
         </p>
 

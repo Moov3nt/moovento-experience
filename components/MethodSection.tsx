@@ -22,9 +22,8 @@ export default function MethodSection() {
         <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
           Ogni sistema evolve continuamente. Leggere
           come un cambiamento si propaga significa
-          comprendere ciò che accade oggi e valutare
-          con maggiore consapevolezza ciò che può 
-          accadere domani.
+          riconoscere ciò che richiede attenzione,
+          decidere come agire e comprendere gli esiti.
         </p>
 
         <div className="mt-32">
@@ -34,28 +33,13 @@ export default function MethodSection() {
             <div>
 
               <span className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
-                OSSERVA
-              </span>
-
-              <p className="mt-6 text-2xl font-light leading-relaxed">
-                Persone, luoghi,
-                servizi, eventi
-                e mobilità.
-              </p>
-
-            </div>
-
-            <div>
-
-              <span className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
                 COMPRENDE
               </span>
 
               <p className="mt-6 text-2xl font-light leading-relaxed">
-                Le relazioni che
-                influenzano il
-                comportamento
-                del sistema.
+                Come persone, luoghi,
+                servizi, eventi e mobilità
+                evolvono insieme.
               </p>
 
             </div>
@@ -63,14 +47,29 @@ export default function MethodSection() {
             <div>
 
               <span className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
-                SUPPORTA
+                GOVERNA
               </span>
 
               <p className="mt-6 text-2xl font-light leading-relaxed">
-                Decisioni più
-                consapevoli,
-                sostenibili
-                e resilienti.
+                Le opportunità che
+                richiedono decisioni,
+                responsabilità
+                e azioni coordinate.
+              </p>
+
+            </div>
+
+            <div>
+
+              <span className="text-[11px] uppercase tracking-[0.35em] text-[#A8B68A]">
+                IMPARA
+              </span>
+
+              <p className="mt-6 text-2xl font-light leading-relaxed">
+                Dagli esiti osservati,
+                per rendere più
+                consapevoli
+                le scelte successive.
               </p>
 
             </div>
@@ -82,9 +81,9 @@ export default function MethodSection() {
         <div className="mt-32 border-t border-white/10 pt-16">
 
           <p className="max-w-4xl text-3xl font-light leading-relaxed text-neutral-300">
-            Ogni sistema è unico.
+            Ogni contesto è unico.
             <br />
-            Il metodo per comprenderlo può essere lo stesso.
+            Il percorso dalla comprensione all&apos;azione resta coerente.
           </p>
 
         </div>

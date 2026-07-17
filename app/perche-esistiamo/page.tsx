@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Perché esistiamo",
   description:
-    "Moovento nasce per leggere la complessità attraverso relazioni, dipendenze e influenze, trasformando la comprensione dei sistemi in capacità di agire.",
+    "Moovento nasce per comprendere relazioni, dipendenze e influenze, trasformando ciò che accade in decisioni responsabili, azioni coordinate e apprendimento.",
 };
 export default function WhyPage() {
   return (

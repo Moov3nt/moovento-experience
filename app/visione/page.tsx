@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Visione",
   description:
-    "La complessità non è il problema. Moovento legge le relazioni tra persone, servizi, infrastrutture, eventi e mobilità per comprendere come evolvono i sistemi.",
+    "Moovento legge come evolvono le relazioni tra persone, servizi, infrastrutture, eventi e mobilità, trasformando la comprensione in azione responsabile.",
 };
 export default function VisionPage() {
   return (

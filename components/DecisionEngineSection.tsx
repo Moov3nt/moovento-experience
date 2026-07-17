@@ -18,28 +18,27 @@ export default function DecisionEngineSection() {
         {/* LEFT */}
         <div>
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            SUPPORTO ALLE DECISIONI
+            GOVERNARE L&apos;AZIONE
           </span>
 
           <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Ogni cambiamento
+            Ogni decisione
             <br />
-            modifica
+            apre un percorso
             <br />
-            ciò che accade
-            <br />
-            intorno.
+            di responsabilità.
           </h2>
 
           <p className="mt-12 max-w-xl text-xl leading-relaxed text-neutral-400">
-            Moovento osserva come una variazione si propaga nel sistema,
-            rendendo visibili effetti, criticità e conseguenze possibili.
+            Moovento mantiene unite le evidenze, la scelta e ciò che ne
+            consegue, perché le decisioni diventino lavoro coordinato
+            e ogni risultato possa essere compreso.
           </p>
 
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-neutral-300">
-            Non indica una risposta unica.
+            Non decide al posto delle persone.
             <br />
-            Rende più consapevole la scelta.
+            Rende più chiari responsabilità, azioni ed esiti.
           </p>
         </div>
 
@@ -47,7 +46,7 @@ export default function DecisionEngineSection() {
         <div className="flex justify-center">
           <div className="w-full max-w-xl rounded-[36px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl">
             <div className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-              Scenario aggiornato
+              Decisione in valutazione
             </div>
 
             <h3 className="mt-5 text-4xl font-light">
@@ -83,7 +82,7 @@ export default function DecisionEngineSection() {
 
               <div className="flex justify-between">
                 <span className="text-neutral-400">
-                  Raccomandazione
+                  Azione proposta
                 </span>
 
                 <span className="text-[#C4D39A]">
@@ -94,9 +93,9 @@ export default function DecisionEngineSection() {
 
             <div className="mt-14 border-t border-white/10 pt-10">
               <p className="leading-relaxed text-neutral-400">
-                L&apos;analisi evidenzia che un incremento della frequenza
-                del trasporto pubblico nelle fasce orarie di maggiore
-                affluenza potrebbe migliorare l&apos;equilibrio del sistema.
+                Se condiviso, l&apos;incremento del servizio diventa
+                un&apos;azione coordinata: responsabilità, avanzamento
+                e risultato restano collegati alla decisione iniziale.
               </p>
             </div>
           </div>

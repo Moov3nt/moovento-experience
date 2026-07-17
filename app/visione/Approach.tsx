@@ -34,10 +34,10 @@ export default function Approach() {
           {[
             "Osservare",
             "Comprendere",
-            "Mettere in relazione",
-            "Scoprire",
-            "Supportare",
-            "Generare valore",
+            "Riconoscere",
+            "Decidere",
+            "Coordinare",
+            "Imparare",
           ].map((step, index) => (
 
             <div
@@ -62,8 +62,8 @@ export default function Approach() {
         </div>
 
         <p className="mt-24 max-w-3xl text-xl leading-relaxed text-neutral-500">
-          Ogni passaggio rende il sistema più comprensibile.
-          Ogni decisione diventa più consapevole.
+          Ogni passaggio collega ciò che accade a ciò che viene deciso.
+          Ogni risultato diventa conoscenza per le scelte successive.
         </p>
 
       </div>

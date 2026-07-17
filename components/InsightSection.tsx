@@ -18,25 +18,27 @@ export default function InsightSection() {
         {/* LEFT */}
         <div>
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            DA COMPRENSIONE A DECISIONE
+            DALL&apos;EVOLUZIONE ALL&apos;OPPORTUNITÀ
           </span>
 
           <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Ciò che comprendiamo
+            Ciò che cambia
             <br />
-            cambia ciò che
+            nel sistema rivela
             <br />
-            possiamo decidere.
+            ciò che richiede
+            <br />
+            attenzione.
           </h2>
 
           <div className="mt-12 space-y-3 text-xl leading-relaxed text-neutral-400 md:text-2xl">
-            <p>Anticipare un impatto.</p>
-            <p>Leggere un flusso.</p>
-            <p>Valutare uno scenario.</p>
+            <p>Riconoscere un cambiamento.</p>
+            <p>Comprenderne gli effetti.</p>
+            <p>Valutare un&apos;opportunità.</p>
           </div>
 
           <p className="mt-10 max-w-md text-xl leading-relaxed text-neutral-300">
-            La comprensione diventa capacità di agire.
+            L&apos;evidenza diventa una possibilità da governare.
           </p>
         </div>
 
@@ -46,7 +48,7 @@ export default function InsightSection() {
             <div className="flex items-start justify-between">
               <div>
                 <div className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-                  Scenario
+                  Evoluzione osservata
                 </div>
 
                 <h3 className="mt-3 text-5xl font-light">
@@ -56,7 +58,7 @@ export default function InsightSection() {
 
               <div className="text-right">
                 <div className="text-[10px] uppercase tracking-[0.25em] text-neutral-500">
-                  Impatto
+                  Rilevanza
                 </div>
 
                 <div className="rounded-full bg-[#C4D39A]/10 px-5 py-2 text-xl text-[#C4D39A]">
@@ -67,9 +69,9 @@ export default function InsightSection() {
 
             <div className="mt-14 space-y-8">
               {[
-                ["Capacità della rete", 84],
+                ["Pressione sulla rete", 84],
                 ["Distribuzione dei flussi", 67],
-                ["Impatto sul territorio", 91],
+                ["Servizi coinvolti", 91],
               ].map(([label, value]) => (
                 <div key={String(label)}>
                   <div className="mb-3 flex justify-between text-neutral-400">

@@ -18,15 +18,14 @@ export default function Paradigm() {
 
         <p className="mt-12 max-w-3xl text-xl leading-relaxed text-neutral-400">
           Quando un sistema viene compreso,
-          smette di essere soltanto un tema operativo
-          e diventa un asset strategico.
+          ciò che accade può essere valutato,
+          governato e trasformato in azione consapevole.
         </p>
 
         <p className="mt-8 max-w-3xl text-xl leading-relaxed text-neutral-500">
-          Comprenderne le relazioni significa prendere
-          decisioni migliori, generare valore economico,
-          rafforzare la reputazione e costruire
-          un vantaggio competitivo duraturo.
+          Collegare evidenze, decisioni e risultati
+          permette di riconoscere il valore generato,
+          rafforzare la fiducia e imparare da ogni intervento.
         </p>
 
         <div className="mt-24 grid gap-16 lg:grid-cols-3">
@@ -40,7 +39,7 @@ export default function Paradigm() {
             <p className="mt-6 text-2xl font-light leading-relaxed">
               Efficienza.
               <br />
-              Profitto.
+              Risultati.
               <br />
               Opportunità.
             </p>
@@ -70,11 +69,11 @@ export default function Paradigm() {
             </div>
 
             <p className="mt-6 text-2xl font-light leading-relaxed">
-              Decisioni.
+              Responsabilità.
               <br />
               Resilienza.
               <br />
-              Competitività.
+              Apprendimento.
             </p>
 
           </div>

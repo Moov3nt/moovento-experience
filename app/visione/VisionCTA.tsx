@@ -12,23 +12,21 @@ export default function VisionCTA() {
 
         <h2 className="mt-10 text-5xl font-light leading-[1.02] tracking-[-0.04em] md:text-7xl">
 
-          Ogni sistema
+          Ogni sistema evolve.
           <br />
-          racconta una storia.
+          Iniziamo da ciò
           <br />
-          Iniziamo
-          <br />
-          a comprenderla.
+          che richiede attenzione.
 
         </h2>
 
         <p className="mx-auto mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
 
-          Ogni organizzazione affronta sfide diverse.
+          Ogni organizzazione assume responsabilità diverse.
           <br />
-          Ogni sistema custodisce opportunità differenti.
+          Ogni scelta genera azioni e risultati differenti.
           <br />
-          Il primo passo è imparare a leggerne le relazioni.
+          Il primo passo è comprendere insieme ciò che sta cambiando.
 
         </p>
 
