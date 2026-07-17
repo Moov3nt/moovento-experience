@@ -10,16 +10,19 @@ export default function OperationalJourneySection() {
         <div className="max-w-4xl">
           <p className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">Scenario interattivo illustrativo</p>
           <h2 id={headingId} className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Dall&apos;opportunità<br />all&apos;esito.
+            Scopri come unopportunità diventa unazione coordinata
           </h2>
           <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-300 md:text-2xl">
-            Che cosa accade quando un&apos;opportunità entra in un percorso governato?
+            Segui un percorso operativo illustrativo e osserva come unevidenza viene trasformata, passo dopo passo, in una decisione, una missione e un risultato.
           </p>
           <p id={purposeId} className="mt-8 max-w-2xl text-lg leading-relaxed text-neutral-400">
             Un solo percorso operativo illustrativo. Ogni passaggio è intenzionalmente deterministico: serve a comprendere come evidenza, scelta e azione restano collegate, non a simulare un sistema reale.
           </p>
         </div>
-        <div className="mt-20"><OperationalDashboard labelledBy={headingId} /></div>
+        <p className="mt-16 max-w-2xl text-sm leading-relaxed text-[#A8B68A]">
+          Inizia dal primo passaggio utilizzando lazione disponibile.
+        </p>
+        <div className="mt-4"><OperationalDashboard labelledBy={headingId} /></div>
         <div className="mt-20 border-t border-white/10 pt-10">
           <p className="max-w-3xl text-xl leading-relaxed text-neutral-300 md:text-2xl">
             Quando viene registrato, l&apos;Outcome diventa nuova evidenza che sostiene la comprensione delle evoluzioni operative future.
