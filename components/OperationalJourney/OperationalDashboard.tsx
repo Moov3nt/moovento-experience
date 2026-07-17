@@ -56,7 +56,13 @@ type ConfirmationIntent =
 const illustrativeConsequence =
   "Questa azione aggiorna soltanto lo scenario illustrativo.";
 
-export default function OperationalDashboard() {
+type OperationalDashboardProps = {
+  labelledBy?: string;
+};
+
+export default function OperationalDashboard({
+  labelledBy,
+}: OperationalDashboardProps) {
   const [committedStage, setCommittedStage] = useState(initialStage);
   const [confirmation, setConfirmation] =
     useState<ConfirmationIntent | null>(null);
@@ -142,19 +148,16 @@ export default function OperationalDashboard() {
 
   return (
     <section
-      aria-labelledby="operational-dashboard-title"
+      aria-labelledby={labelledBy ?? "operational-dashboard-title"}
       className="w-full overflow-x-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-6 text-white backdrop-blur-xl md:p-10 lg:p-12"
     >
       <header className="mb-10 flex flex-col gap-5 border-b border-white/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-[10px] uppercase tracking-[0.35em] text-[#A8B68A]">
-            Scenario interattivo illustrativo
-          </p>
           <h2
             ref={headingRef}
             id="operational-dashboard-title"
             tabIndex={-1}
-            className="mt-4 text-3xl font-light tracking-[-0.035em] outline-none focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C4D39A] md:text-5xl"
+            className="text-3xl font-light tracking-[-0.035em] outline-none focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C4D39A] md:text-5xl"
           >
             Percorso operativo
           </h2>
