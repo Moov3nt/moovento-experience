@@ -1,9 +1,8 @@
 import Manifesto from "../components/Manifesto";
 import Hero from "../components/Hero";
-import PlatformSection from "../components/PlatformSection";
 import InsightSection from "../components/InsightSection";
+import PlatformSection from "../components/PlatformSection";
 import OperationalJourneySection from "../components/OperationalJourney/OperationalJourneySection";
-import DecisionEngineSection from "../components/DecisionEngineSection";
 import CTASection from "../components/CTASection";
 
 export default function Home() {
@@ -13,13 +12,11 @@ export default function Home() {
 
       <Manifesto />
 
-      <PlatformSection />
-
       <InsightSection />
 
-      <OperationalJourneySection />
+      <PlatformSection />
 
-      <DecisionEngineSection />
+      <OperationalJourneySection />
 
       <CTASection />
     </>
