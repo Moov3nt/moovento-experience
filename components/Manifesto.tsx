@@ -17,32 +17,28 @@ export default function Manifesto() {
     >
       <div className="mx-auto w-full max-w-6xl px-8 lg:px-16">
         <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-          MANIFESTO
+          IL PROBLEMA
         </span>
 
         <h2 className="mt-8 max-w-5xl text-[54px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">
-          I sistemi complessi non
+          Ogni evento genera decisioni ed effetti.
           <br />
-          hanno bisogno di più dati.
-          <br />
-          Hanno bisogno di{" "}
+          Troppo spesso non diventano{" "}
           <span className="text-[#A8B68A]">
-            comprenderli.
+            esperienza.
           </span>
         </h2>
 
         <p className="mt-12 max-w-2xl text-xl leading-relaxed text-neutral-400">
-          Ogni giorno persone, servizi, infrastrutture, eventi e mobilità
-          generano milioni di connessioni. Queste relazioni raccontano
-          come un sistema evolve e dove un cambiamento richiede attenzione.
+          Segnali, scelte, azioni ed esiti vengono spesso osservati
+          separatamente. Quando l&apos;evento termina, una parte importante
+          di ciò che è accaduto si disperde.
           <br />
           <br />
           <strong className="font-medium text-white">
-            Moovento nasce per renderle comprensibili.
+            Moovento nasce per trasformare questa esperienza in conoscenza
+            utilizzabile.
           </strong>
-          <br />
-          Per trasformare ciò che accade in evidenze condivise,
-          capaci di guidare decisioni responsabili e azioni coordinate.
         </p>
       </div>
     </section>

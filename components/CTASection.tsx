@@ -19,36 +19,32 @@ export default function CTASection() {
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
 
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            INIZIAMO
+            UN PRIMO CONFRONTO
           </span>
 
           <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Le decisioni
+            Ogni evento può lasciare
             <br />
-            restano
-            <br />
-            umane.
+            più valore del precedente.
           </h2>
 
           <div className="mt-14 text-center text-xl leading-relaxed text-neutral-400">
             <p>
-              Ogni organizzazione governa cambiamenti diversi.
-              <br />
-              Ogni decisione coinvolge responsabilità e risultati diversi.
+              Partiamo da un evento reale, dalle decisioni che richiede e
+              dalla conoscenza che oggi rischia di andare perduta.
             </p>
 
             <p className="mt-8">
-              Per questo partiamo dal tuo sistema,
-              <br />
-              da ciò che sta evolvendo e da ciò che vuoi comprendere.
+              Un primo confronto può aiutarci a capire se il metodo Moovento
+              è applicabile al tuo contesto.
             </p>
           </div>
 
           <a
             href="mailto:giacinto@moovento.it"
-            className="mt-20 inline-flex items-center justify-center rounded-full border border-[#A8B68A]/60 px-10 py-5 text-[11px] uppercase tracking-[0.35em] text-white transition-all hover:border-[#A8B68A] hover:bg-[#A8B68A]/10"
+            className="mt-20 inline-block max-w-full rounded-full border border-[#A8B68A]/60 px-5 py-5 text-center text-[10px] uppercase leading-snug tracking-[0.22em] text-white transition-all hover:border-[#A8B68A] hover:bg-[#A8B68A]/10 md:inline-flex md:px-10 md:text-[11px] md:tracking-[0.35em] md:leading-normal"
           >
-            Inizia una conversazione
+            Parliamo del tuo prossimo evento
           </a>
 
         </div>

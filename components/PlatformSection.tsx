@@ -12,29 +12,27 @@ export default function PlatformSection() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center text-white"
+      className="relative flex min-h-screen items-center py-24 pb-32 text-white md:py-32 md:pb-40"
     >
       <div className="mx-auto w-full max-w-7xl px-8 lg:px-16">
         <div className="grid grid-cols-1 gap-24 lg:grid-cols-2">
           {/* LEFT */}
           <div>
             <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-              COME FUNZIONA
+              IL METODO MOOVENTO
             </span>
 
             <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-              Comprendere significa
+              Osservare. Comprendere.
               <br />
-              mettere
-              <br />
-              in relazione.
+              Decidere. Valutare. Evolvere.
             </h2>
 
             <p className="mt-14 max-w-xl text-xl leading-relaxed text-neutral-400">
-              Moovento connette ciò che normalmente viene osservato
-              separatamente. Persone, servizi, infrastrutture, mobilità
-              ed eventi diventano parte di una visione che segue come
-              relazioni, dipendenze e opportunità evolvono nel tempo.
+              Moovento collega ciò che accade durante un evento alle
+              decisioni adottate e agli effetti che ne derivano. Ogni
+              passaggio conserva il proprio significato e contribuisce a
+              costruire esperienza per gli eventi successivi.
             </p>
           </div>
 
@@ -42,11 +40,12 @@ export default function PlatformSection() {
           <div className="flex items-center justify-center">
             <div className="space-y-8">
               {[
-                "Persone",
-                "Servizi",
-                "Infrastrutture",
-                "Mobilità",
-                "Eventi",
+                "Osservare",
+                "Comprendere",
+                "Decidere",
+                "Agire",
+                "Valutare",
+                "Evolvere",
               ].map((item) => (
                 <div
                   key={item}
@@ -63,10 +62,10 @@ export default function PlatformSection() {
           </div>
         </div>
 
-        <div className="mt-24 border-t border-white/10 pt-10">
+        <div className="mt-16 border-t border-white/10 pt-10 md:mt-20">
           <p className="max-w-3xl text-3xl leading-relaxed text-neutral-300">
-            Quando seguiamo le connessioni nel tempo,
-            emerge ciò che richiede una scelta.
+            Ogni evento può così lasciare l&apos;organizzazione più
+            preparata del precedente.
           </p>
         </div>
       </div>

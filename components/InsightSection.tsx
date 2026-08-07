@@ -12,33 +12,32 @@ export default function InsightSection() {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center text-white"
+      className="relative flex min-h-screen items-center py-24 pb-32 text-white md:py-32 md:pb-40"
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-24 px-8 lg:grid-cols-2 lg:px-16">
         {/* LEFT */}
         <div>
           <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            DALL&apos;EVOLUZIONE ALL&apos;OPPORTUNITÀ
+            IL VALORE INVISIBILE
           </span>
 
-          <h2 className="mt-8 text-[56px] font-light leading-[0.98] tracking-[-0.04em] md:text-[88px]">
-            Ciò che cambia
+          <h2 className="mt-8 text-[50px] font-light leading-[0.98] tracking-[-0.04em] md:text-[80px]">
+            Il valore emerge quando
             <br />
-            nel sistema rivela
+            ciò che accade viene
             <br />
-            ciò che richiede
-            <br />
-            attenzione.
+            messo in relazione.
           </h2>
 
           <div className="mt-12 space-y-3 text-xl leading-relaxed text-neutral-400 md:text-2xl">
-            <p>Riconoscere un cambiamento.</p>
+            <p>Osservare un cambiamento.</p>
             <p>Comprenderne gli effetti.</p>
-            <p>Valutare un&apos;opportunità.</p>
+            <p>Riconoscere ciò che richiede una decisione.</p>
           </div>
 
           <p className="mt-10 max-w-md text-xl leading-relaxed text-neutral-300">
-            L&apos;evidenza diventa una possibilità da governare.
+            È qui che un&apos;evidenza può diventare un&apos;opportunità
+            operativa, economica, ambientale, sociale o di sicurezza.
           </p>
         </div>
 
@@ -48,7 +47,7 @@ export default function InsightSection() {
             <div className="flex items-start justify-between">
               <div>
                 <div className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-                  Evoluzione osservata
+                  Scenario illustrativo
                 </div>
 
                 <h3 className="mt-3 text-5xl font-light">
