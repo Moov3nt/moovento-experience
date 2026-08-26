@@ -18,11 +18,16 @@ export default function SiteHeader() {
       <header className="absolute left-0 right-0 top-0 z-50 flex items-center justify-between px-8 py-8 md:px-10">
         <Link
           href="/"
-          className="relative z-50 text-xl font-semibold tracking-tight text-white"
-          aria-label="Moovento Home"
+          className="relative z-50 flex items-baseline gap-3 font-sans text-revealue-ivory"
+          aria-label="REVEALUE Home"
           onClick={() => setMenuOpen(false)}
         >
-          moovento
+          <span className="text-lg font-medium tracking-[0.08em]">
+            REVEALUE
+          </span>
+          <span className="text-[8px] font-medium tracking-[0.28em] text-revealue-mineral sm:text-[9px]">
+            EVENT INTELLIGENCE
+          </span>
         </Link>
 
         <nav
@@ -74,7 +79,7 @@ export default function SiteHeader() {
           </nav>
 
           <p className="mt-auto text-[10px] uppercase tracking-[0.35em] text-neutral-600">
-            Making the Invisible Valuable
+            REVEALUE · EVENT INTELLIGENCE
           </p>
         </div>
       )}

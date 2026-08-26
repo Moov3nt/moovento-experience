@@ -17,8 +17,8 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
   field: {
     fieldOpacity: 0.28,
     starOpacity: 0.72,
-    nodeOpacity: 0.42,
-    edgeOpacity: 0.08,
+    nodeOpacity: 0.46,
+    edgeOpacity: 0.1,
     hubIntensity: 0.35,
     pulseEnabled: false,
     flashEnabled: false,

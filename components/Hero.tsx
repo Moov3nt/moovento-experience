@@ -12,35 +12,25 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative h-screen overflow-hidden text-white"
+      className="relative min-h-svh overflow-hidden font-sans text-revealue-ivory"
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/35" />
+      <div className="absolute inset-0 bg-gradient-to-r from-revealue-deep via-revealue-deep/75 to-revealue-deep/10" />
 
-      {/* Hero Content */}
-      <div className="relative z-10 flex h-full items-center">
-        <div className="mx-auto w-full max-w-7xl px-10">
-          <p className="mb-8 text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-            MAKING THE INVISIBLE VALUABLE
-          </p>
-
-          <h1 className="max-w-5xl text-[72px] font-light leading-[0.95] tracking-[-0.05em] md:text-[118px]">
-            Ogni evento lascia
-            <br />
-            qualcosa da comprendere.
+      <div className="relative z-10 mx-auto flex min-h-svh w-full max-w-[90rem] flex-col px-6 pb-14 pt-28 sm:px-10 sm:pb-16 sm:pt-32 lg:px-16 lg:pb-20 lg:pt-36">
+        <div className="flex flex-1 items-center py-12 sm:py-16 lg:py-20">
+          <h1 className="max-w-[12ch] text-[clamp(3.25rem,6.5vw,7rem)] font-light leading-[0.92] tracking-[-0.055em] text-balance">
+            <span className="block">Comprendere l&apos;insieme.</span>
+            <span className="mt-[0.32em] block">Far emergere ciò che conta.</span>
           </h1>
+        </div>
 
-          <p className="mt-12 max-w-md text-lg leading-relaxed text-neutral-400">
-            Moovento rende leggibili relazioni, decisioni ed effetti per
-            aiutare le organizzazioni a evolvere, evento dopo evento.
-          </p>
-
+        <div className="border-t border-revealue-mineral/20 pt-6 sm:pt-7">
           <a
             href="#manifesto"
-            className="mt-16 flex w-fit items-center gap-3 text-[11px] font-medium uppercase tracking-[0.25em] transition-all hover:gap-5"
+            className="inline-flex min-h-11 items-center gap-4 text-[10px] font-medium uppercase tracking-[0.3em] text-revealue-mineral hover:text-revealue-ivory focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-revealue-copper sm:text-[11px]"
           >
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-revealue-copper" />
             Scopri il metodo
-            <span>→</span>
           </a>
         </div>
       </div>

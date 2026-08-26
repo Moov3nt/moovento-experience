@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --revealue-deep: #07110e;
+  --revealue-ivory: #f0eadf;
+  --revealue-mineral: #8f9c8b;
+  --revealue-copper: #b8754f;
 }
 
 @theme inline {
@@ -10,6 +14,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-revealue-deep: var(--revealue-deep);
+  --color-revealue-ivory: var(--revealue-ivory);
+  --color-revealue-mineral: var(--revealue-mineral);
+  --color-revealue-copper: var(--revealue-copper);
 }
 
 @media (prefers-color-scheme: dark) {
