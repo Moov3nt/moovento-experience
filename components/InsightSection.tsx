@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function InsightSection() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "insight");
+  useSceneObserver(ref, "relevance");
 
   return (
     <section

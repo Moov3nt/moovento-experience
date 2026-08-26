@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function DecisionEngineSection() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "decision");
+  useSceneObserver(ref, "action");
 
   return (
     <section

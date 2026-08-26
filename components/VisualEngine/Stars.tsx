@@ -4,9 +4,15 @@ import type { Star } from "./types";
 
 type Props = {
   stars: Star[];
+  opacity: number;
+  transitionDurationMs: number;
 };
 
-export default function Stars({ stars }: Props) {
+export default function Stars({
+  stars,
+  opacity,
+  transitionDurationMs,
+}: Props) {
   return (
     <>
       {stars.map((star) => (
@@ -16,7 +22,10 @@ export default function Stars({ stars }: Props) {
           cy={star.y}
           r={star.radius}
           fill="white"
-          opacity={star.opacity}
+          opacity={star.opacity * opacity}
+          style={{
+            transition: `opacity ${transitionDurationMs}ms ease-in-out`,
+          }}
         />
       ))}
     </>

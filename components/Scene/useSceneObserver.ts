@@ -2,14 +2,14 @@
 
 import { useEffect, RefObject } from "react";
 
-import { Scene } from "./SceneContext";
-import { useScene } from "./SceneContext";
+import { VisualState } from "./SceneContext";
+import { useVisualState } from "./SceneContext";
 
 export function useSceneObserver(
   ref: RefObject<HTMLElement | null>,
-  scene: Scene
+  visualState: VisualState
 ) {
-  const { setScene } = useScene();
+  const { setVisualState } = useVisualState();
 
   useEffect(() => {
     const element = ref.current;
@@ -19,7 +19,7 @@ export function useSceneObserver(
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setScene(scene);
+          setVisualState(visualState);
         }
       },
       {
@@ -30,5 +30,5 @@ export function useSceneObserver(
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [ref, scene, setScene]);
+  }, [ref, visualState, setVisualState]);
 }

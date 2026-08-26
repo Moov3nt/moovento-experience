@@ -3,8 +3,8 @@
 import { useMemo, useState } from "react";
 
 import {
-  Scene,
   SceneContext,
+  VisualState,
 } from "./SceneContext";
 
 type Props = {
@@ -14,15 +14,15 @@ type Props = {
 export default function SceneProvider({
   children,
 }: Props) {
-  const [scene, setScene] =
-    useState<Scene>("hero");
+  const [visualState, setVisualState] =
+    useState<VisualState>("field");
 
   const value = useMemo(
     () => ({
-      scene,
-      setScene,
+      visualState,
+      setVisualState,
     }),
-    [scene]
+    [visualState]
   );
 
   return (

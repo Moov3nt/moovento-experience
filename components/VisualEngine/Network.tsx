@@ -2,12 +2,12 @@
 
 import { COLORS, ENGINE } from "./constants";
 import type { Edge, Hub } from "./types";
-import type { SceneConfig } from "./scenes";
+import type { VisualPresentation } from "./scenes";
 
 type Props = {
   hubs: Hub[];
   edges: Edge[];
-  config: SceneConfig;
+  presentation: VisualPresentation;
   energy: number[];
   breath: number;
 };
@@ -15,7 +15,7 @@ type Props = {
 export default function Network({
   hubs,
   edges,
-  config,
+  presentation,
   energy,
   breath,
 }: Props) {
@@ -23,31 +23,11 @@ export default function Network({
   const hubMap = new Map(
     hubs.map((hub) => [hub.id, hub]),
   );
+  const selectedNodeIds = new Set(presentation.selectedNodeIds);
+  const selectedEdgeKeys = new Set(presentation.selectedEdgeKeys);
 
   return (
     <>
-      <defs>
-        <radialGradient id="hubGlow">
-          <stop
-            offset="0%"
-            stopColor={COLORS.glow}
-            stopOpacity={0.22 * config.glow}
-          />
-
-          <stop
-            offset="45%"
-            stopColor={COLORS.glow}
-            stopOpacity={0.05 * config.glow}
-          />
-
-          <stop
-            offset="100%"
-            stopColor={COLORS.glow}
-            stopOpacity="0"
-          />
-        </radialGradient>
-      </defs>
-
       {/* CONNECTIONS */}
 
       {edges.map((edge) => {
@@ -55,6 +35,8 @@ export default function Network({
         const to = hubMap.get(edge.to);
 
         if (!from || !to) return null;
+
+        const selected = selectedEdgeKeys.has(`${edge.from}-${edge.to}`);
 
         return (
           <line
@@ -70,14 +52,9 @@ export default function Network({
                   : 0.10
             }
             strokeLinecap="round"
-            opacity={
-                  edge.primary
-                  ? 0.20
-                  : 0.12
-            }
+            opacity={selected ? 1 : presentation.edgeOpacity}
             style={{
-              transition:
-                "opacity 900ms ease-in-out",
+              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
             }}
           />
         );
@@ -100,7 +77,10 @@ export default function Network({
         cy={hub.y}
         r={base * (1.8 + e * 0.6)}
         fill={COLORS.glow}
-        opacity={0.015 + breath * 0.015 + e * 0.03}
+        opacity={(0.015 + breath * 0.015 + e * 0.03) * presentation.hubIntensity}
+        style={{
+          transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
+        }}
       />
 
       <circle
@@ -108,7 +88,10 @@ export default function Network({
         cy={hub.y}
         r={base * (1.15 + e * 0.35)}
         fill={COLORS.glow}
-        opacity={0.045 + breath * 0.025 + e * 0.06}
+        opacity={(0.045 + breath * 0.025 + e * 0.06) * presentation.hubIntensity}
+        style={{
+          transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
+        }}
       />
     </g>
   );
@@ -123,6 +106,10 @@ export default function Network({
           cy={hub.y}
           r={hub.radius}
           fill={COLORS.hub}
+          opacity={selectedNodeIds.has(hub.id) ? 1 : presentation.nodeOpacity}
+          style={{
+            transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
+          }}
         />
       ))}
     </>

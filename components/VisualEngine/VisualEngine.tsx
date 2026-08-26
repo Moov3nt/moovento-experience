@@ -6,8 +6,8 @@ import Network from "./Network";
 import Stars from "./Stars";
 import PulseRenderer from "./PulseRenderer";
 import { generateScene } from "./generator";
-import { SCENES } from "./scenes";
-import type { Scene } from "../Scene/SceneContext";
+import { VISUAL_PRESENTATIONS } from "./scenes";
+import type { VisualState } from "../Scene/SceneContext";
 import { usePulseEngine } from "./engine/usePulseEngine";
 import { useHubEnergy } from "./engine/useHubEnergy";
 import { useNetworkBreath } from "./engine/useNetworkBreath";
@@ -16,15 +16,13 @@ import NodeFlash from "./NodeFlash";
 import { useEventEngine } from "./engine/useEventEngine";
 
 type Props = {
-  scene: Scene;
+  visualState: VisualState;
 };
 
 export default function VisualEngine({
-  scene,
+  visualState,
 }: Props) {
-  const config =
-    SCENES[scene] ??
-    SCENES.hero;
+  const presentation = VISUAL_PRESENTATIONS[visualState];
 
   const graph = useMemo(
     () => generateScene(),
@@ -55,44 +53,50 @@ export default function VisualEngine({
         preserveAspectRatio="xMidYMid slice"
         className="w-full h-full"
         style={{
-          opacity: config.opacity,
-          transition:
-            "opacity 1200ms ease-in-out",
+          opacity: presentation.fieldOpacity,
+          transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
         }}
       >
         <Background />
 
         <Stars
           stars={graph.stars}
-
+          opacity={presentation.starOpacity}
+          transitionDurationMs={presentation.transitionDurationMs}
         />
 
         <Network
           hubs={graph.hubs}
           edges={graph.edges}
-          config={config}
+          presentation={presentation}
           energy={energy}
           breath={breath}
         />
 
-        <PulseTrail
-          hubs={graph.hubs}
-          edges={graph.edges}
-          edgeIndex={pulse.edgeIndex}
-          progress={pulse.progress}
-        />
+        {presentation.pulseEnabled && (
+          <PulseTrail
+            hubs={graph.hubs}
+            edges={graph.edges}
+            edgeIndex={pulse.edgeIndex}
+            progress={pulse.progress}
+          />
+        )}
 
-        <NodeFlash
-          hubs={graph.hubs}
-          activeHub={flashHub}
-        />
+        {presentation.flashEnabled && (
+          <NodeFlash
+            hubs={graph.hubs}
+            activeHub={flashHub}
+          />
+        )}
 
-        <PulseRenderer
-          hubs={graph.hubs}
-          edges={graph.edges}
-          edgeIndex={pulse.edgeIndex}
-          progress={pulse.progress}
-        />
+        {presentation.pulseEnabled && (
+          <PulseRenderer
+            hubs={graph.hubs}
+            edges={graph.edges}
+            edgeIndex={pulse.edgeIndex}
+            progress={pulse.progress}
+          />
+        )}
           
             </svg>
     </div>

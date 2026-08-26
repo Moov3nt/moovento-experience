@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function PlatformSection() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "platform");
+  useSceneObserver(ref, "action");
 
   return (
     <section

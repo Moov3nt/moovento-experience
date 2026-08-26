@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "hero");
+  useSceneObserver(ref, "field");
 
   return (
     <section

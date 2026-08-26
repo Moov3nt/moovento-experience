@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function Manifesto() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "manifesto");
+  useSceneObserver(ref, "system");
 
   return (
     <section

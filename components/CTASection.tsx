@@ -7,7 +7,7 @@ import { useSceneObserver } from "./Scene/useSceneObserver";
 export default function CTASection() {
   const ref = useRef<HTMLElement>(null);
 
-  useSceneObserver(ref, "cta");
+  useSceneObserver(ref, "field");
 
   return (
     <section

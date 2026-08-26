@@ -5,6 +5,13 @@ import {
   useContext,
 } from "react";
 
+export type VisualState =
+  | "field"
+  | "system"
+  | "relevance"
+  | "action";
+
+/** @deprecated Compatibility for the deferred sceneGraph module only. */
 export type Scene =
   | "hero"
   | "manifesto"
@@ -14,19 +21,19 @@ export type Scene =
   | "cta";
 
 export type SceneContextType = {
-  scene: Scene;
-  setScene: (scene: Scene) => void;
+  visualState: VisualState;
+  setVisualState: (visualState: VisualState) => void;
 };
 
 export const SceneContext =
   createContext<SceneContextType | null>(null);
 
-export function useScene() {
+export function useVisualState() {
   const context = useContext(SceneContext);
 
   if (!context) {
     throw new Error(
-      "useScene must be used inside SceneProvider"
+      "useVisualState must be used inside SceneProvider"
     );
   }
 
