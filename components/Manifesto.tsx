@@ -1,18 +1,7 @@
-"use client";
-
-import { useRef } from "react";
-
-import { useSceneObserver } from "./Scene/useSceneObserver";
-
 export default function Manifesto() {
-  const ref = useRef<HTMLElement>(null);
-
-  useSceneObserver(ref, "system");
-
   return (
     <section
       id="manifesto"
-      ref={ref}
       className="relative min-h-screen flex items-center text-white"
     >
       <div className="mx-auto w-full max-w-6xl px-8 lg:px-16">

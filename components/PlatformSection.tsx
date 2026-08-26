@@ -1,17 +1,6 @@
-"use client";
-
-import { useRef } from "react";
-
-import { useSceneObserver } from "./Scene/useSceneObserver";
-
 export default function PlatformSection() {
-  const ref = useRef<HTMLElement>(null);
-
-  useSceneObserver(ref, "action");
-
   return (
     <section
-      ref={ref}
       className="relative flex min-h-screen items-center py-24 pb-32 text-white md:py-32 md:pb-40"
     >
       <div className="mx-auto w-full max-w-7xl px-8 lg:px-16">

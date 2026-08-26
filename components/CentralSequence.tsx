@@ -16,6 +16,7 @@ export default function CentralSequence() {
   return (
     <>
       <section
+        id="metodo"
         ref={systemRef}
         aria-labelledby="central-sequence-system-title"
         className="relative flex min-h-svh items-center overflow-hidden font-sans text-revealue-ivory"

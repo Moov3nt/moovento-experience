@@ -26,7 +26,7 @@ export default function Hero() {
 
         <div className="border-t border-revealue-mineral/20 pt-6 sm:pt-7">
           <a
-            href="#manifesto"
+            href="#metodo"
             className="inline-flex min-h-11 items-center gap-4 text-[10px] font-medium uppercase tracking-[0.3em] text-revealue-mineral hover:text-revealue-ivory focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-revealue-copper sm:text-[11px]"
           >
             <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-revealue-copper" />

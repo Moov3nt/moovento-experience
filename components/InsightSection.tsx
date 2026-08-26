@@ -1,17 +1,6 @@
-"use client";
-
-import { useRef } from "react";
-
-import { useSceneObserver } from "./Scene/useSceneObserver";
-
 export default function InsightSection() {
-  const ref = useRef<HTMLElement>(null);
-
-  useSceneObserver(ref, "relevance");
-
   return (
     <section
-      ref={ref}
       className="relative flex min-h-screen items-center py-24 pb-32 text-white md:py-32 md:pb-40"
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-24 px-8 lg:grid-cols-2 lg:px-16">
