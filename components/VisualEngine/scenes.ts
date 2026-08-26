@@ -1,4 +1,5 @@
 import type { VisualState } from "../Scene/SceneContext";
+import { RELEVANCE_NARRATIVE_SELECTION } from "../centralSequenceNarrative";
 
 export type VisualPresentation = {
   fieldOpacity: number;
@@ -46,9 +47,9 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     hubIntensity: 0.38,
     pulseEnabled: false,
     flashEnabled: false,
-    transitionDurationMs: 1500,
-    selectedNodeIds: [],
-    selectedEdgeKeys: [],
+    transitionDurationMs: 2200,
+    selectedNodeIds: RELEVANCE_NARRATIVE_SELECTION.selectedNodeIds,
+    selectedEdgeKeys: RELEVANCE_NARRATIVE_SELECTION.selectedEdgeKeys,
   },
   action: {
     fieldOpacity: 0.36,

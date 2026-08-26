@@ -45,7 +45,7 @@ export default function Network({
             y1={from.y}
             x2={to.x}
             y2={to.y}
-            stroke={COLORS.edge}
+            stroke={selected ? "var(--revealue-copper)" : COLORS.edge}
             strokeWidth={
                 edge.primary
                   ? 0.16
@@ -54,7 +54,7 @@ export default function Network({
             strokeLinecap="round"
             opacity={selected ? 1 : presentation.edgeOpacity}
             style={{
-              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
+              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out, stroke ${presentation.transitionDurationMs}ms ease-in-out`,
             }}
           />
         );
@@ -93,19 +93,23 @@ export default function Network({
 
       {/* HUBS */}
 
-      {hubs.map((hub) => (
-        <circle
-          key={hub.id}
-          cx={hub.x}
-          cy={hub.y}
-          r={hub.radius}
-          fill={COLORS.hub}
-          opacity={selectedNodeIds.has(hub.id) ? 1 : presentation.nodeOpacity}
-          style={{
-            transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
-          }}
-        />
-      ))}
+      {hubs.map((hub) => {
+        const selected = selectedNodeIds.has(hub.id);
+
+        return (
+          <circle
+            key={hub.id}
+            cx={hub.x}
+            cy={hub.y}
+            r={hub.radius}
+            fill={selected ? "var(--revealue-copper)" : COLORS.hub}
+            opacity={selected ? 1 : presentation.nodeOpacity}
+            style={{
+              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out, fill ${presentation.transitionDurationMs}ms ease-in-out`,
+            }}
+          />
+        );
+      })}
     </>
   );
 }
