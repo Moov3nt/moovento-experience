@@ -1,5 +1,5 @@
 import type { VisualState } from "../Scene/SceneContext";
-import { RELEVANCE_NARRATIVE_SELECTION } from "../centralSequenceNarrative";
+import { CENTRAL_SEQUENCE_NARRATIVE } from "../centralSequenceNarrative";
 
 export type VisualPresentation = {
   fieldOpacity: number;
@@ -10,8 +10,9 @@ export type VisualPresentation = {
   pulseEnabled: boolean;
   flashEnabled: boolean;
   transitionDurationMs: number;
-  selectedNodeIds: readonly number[];
-  selectedEdgeKeys: readonly string[];
+  relevantNodeIds: readonly number[];
+  relevantEdgeKeys: readonly string[];
+  actionNodeId: number | null;
 };
 
 export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
@@ -24,8 +25,9 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     pulseEnabled: false,
     flashEnabled: false,
     transitionDurationMs: 1400,
-    selectedNodeIds: [],
-    selectedEdgeKeys: [],
+    relevantNodeIds: [],
+    relevantEdgeKeys: [],
+    actionNodeId: null,
   },
   system: {
     fieldOpacity: 0.4,
@@ -36,8 +38,9 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     pulseEnabled: false,
     flashEnabled: false,
     transitionDurationMs: 1400,
-    selectedNodeIds: [],
-    selectedEdgeKeys: [],
+    relevantNodeIds: [],
+    relevantEdgeKeys: [],
+    actionNodeId: null,
   },
   relevance: {
     fieldOpacity: 0.34,
@@ -48,8 +51,9 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     pulseEnabled: false,
     flashEnabled: false,
     transitionDurationMs: 2200,
-    selectedNodeIds: RELEVANCE_NARRATIVE_SELECTION.selectedNodeIds,
-    selectedEdgeKeys: RELEVANCE_NARRATIVE_SELECTION.selectedEdgeKeys,
+    relevantNodeIds: CENTRAL_SEQUENCE_NARRATIVE.relevantNodeIds,
+    relevantEdgeKeys: CENTRAL_SEQUENCE_NARRATIVE.relevantEdgeKeys,
+    actionNodeId: null,
   },
   action: {
     fieldOpacity: 0.36,
@@ -60,7 +64,8 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     pulseEnabled: false,
     flashEnabled: false,
     transitionDurationMs: 1600,
-    selectedNodeIds: [],
-    selectedEdgeKeys: [],
+    relevantNodeIds: CENTRAL_SEQUENCE_NARRATIVE.relevantNodeIds,
+    relevantEdgeKeys: CENTRAL_SEQUENCE_NARRATIVE.relevantEdgeKeys,
+    actionNodeId: CENTRAL_SEQUENCE_NARRATIVE.actionNodeId,
   },
 };

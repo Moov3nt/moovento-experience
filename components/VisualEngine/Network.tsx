@@ -23,8 +23,8 @@ export default function Network({
   const hubMap = new Map(
     hubs.map((hub) => [hub.id, hub]),
   );
-  const selectedNodeIds = new Set(presentation.selectedNodeIds);
-  const selectedEdgeKeys = new Set(presentation.selectedEdgeKeys);
+  const relevantNodeIds = new Set(presentation.relevantNodeIds);
+  const relevantEdgeKeys = new Set(presentation.relevantEdgeKeys);
 
   return (
     <>
@@ -36,7 +36,7 @@ export default function Network({
 
         if (!from || !to) return null;
 
-        const selected = selectedEdgeKeys.has(`${edge.from}-${edge.to}`);
+        const relevant = relevantEdgeKeys.has(`${edge.from}-${edge.to}`);
 
         return (
           <line
@@ -45,14 +45,14 @@ export default function Network({
             y1={from.y}
             x2={to.x}
             y2={to.y}
-            stroke={selected ? "var(--revealue-copper)" : COLORS.edge}
+            stroke={relevant ? "var(--revealue-copper)" : COLORS.edge}
             strokeWidth={
                 edge.primary
                   ? 0.16
                   : 0.10
             }
             strokeLinecap="round"
-            opacity={selected ? 1 : presentation.edgeOpacity}
+            opacity={relevant ? 1 : presentation.edgeOpacity}
             style={{
               transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out, stroke ${presentation.transitionDurationMs}ms ease-in-out`,
             }}
@@ -94,7 +94,8 @@ export default function Network({
       {/* HUBS */}
 
       {hubs.map((hub) => {
-        const selected = selectedNodeIds.has(hub.id);
+        const relevant = relevantNodeIds.has(hub.id);
+        const action = presentation.actionNodeId === hub.id;
 
         return (
           <circle
@@ -102,10 +103,12 @@ export default function Network({
             cx={hub.x}
             cy={hub.y}
             r={hub.radius}
-            fill={selected ? "var(--revealue-copper)" : COLORS.hub}
-            opacity={selected ? 1 : presentation.nodeOpacity}
+            fill={relevant ? "var(--revealue-copper)" : COLORS.hub}
+            stroke={action ? "var(--revealue-ivory)" : "transparent"}
+            strokeWidth={0.18}
+            opacity={relevant ? 1 : presentation.nodeOpacity}
             style={{
-              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out, fill ${presentation.transitionDurationMs}ms ease-in-out`,
+              transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out, fill ${presentation.transitionDurationMs}ms ease-in-out, stroke ${presentation.transitionDurationMs}ms ease-in-out`,
             }}
           />
         );

@@ -1,6 +1,7 @@
-// Static Home narrative fixture for the deterministic default graph (seed 42).
-// This selects the connected right-side branch 4 -> 3 -> 5; it is not engine inference.
-export const RELEVANCE_NARRATIVE_SELECTION = {
-  selectedNodeIds: [3, 4, 5],
-  selectedEdgeKeys: ["4-3", "3-5"],
+// Deterministic Home narrative data for the default graph (seed 42), not engine inference.
+// It demonstrates both the relevant branch 4 -> 3 -> 5 and its intervention locus.
+export const CENTRAL_SEQUENCE_NARRATIVE = {
+  relevantNodeIds: [3, 4, 5],
+  relevantEdgeKeys: ["4-3", "3-5"],
+  actionNodeId: 3,
 } as const;
