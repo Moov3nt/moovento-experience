@@ -19,7 +19,7 @@ export const VISUAL_PRESENTATIONS: Record<VisualState, VisualPresentation> = {
     starOpacity: 0.72,
     nodeOpacity: 0.46,
     edgeOpacity: 0.1,
-    hubIntensity: 0.35,
+    hubIntensity: 0.5,
     pulseEnabled: false,
     flashEnabled: false,
     transitionDurationMs: 1400,

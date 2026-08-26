@@ -77,10 +77,7 @@ export default function Network({
         cy={hub.y}
         r={base * (1.8 + e * 0.6)}
         fill={COLORS.glow}
-        opacity={(0.015 + breath * 0.015 + e * 0.03) * presentation.hubIntensity}
-        style={{
-          transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
-        }}
+        opacity={(0.015 + breath * 0.03 + e * 0.03) * presentation.hubIntensity}
       />
 
       <circle
@@ -88,10 +85,7 @@ export default function Network({
         cy={hub.y}
         r={base * (1.15 + e * 0.35)}
         fill={COLORS.glow}
-        opacity={(0.045 + breath * 0.025 + e * 0.06) * presentation.hubIntensity}
-        style={{
-          transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
-        }}
+        opacity={(0.045 + breath * 0.05 + e * 0.06) * presentation.hubIntensity}
       />
     </g>
   );
