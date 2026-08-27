@@ -37,13 +37,13 @@ export default function CTASection() {
             Ora possiamo osservare il tuo.
           </h2>
 
-          <p className="mt-12 max-w-[36rem] text-[clamp(1.125rem,1.8vw,1.5rem)] font-light leading-relaxed text-revealue-mineral sm:mt-14">
+          <p className="mt-12 max-w-[32rem] text-[clamp(1.0625rem,1.45vw,1.25rem)] font-light leading-relaxed text-revealue-mineral sm:mt-14">
             Partiamo da un evento reale. Da ciò che accade, dalle decisioni
             possibili e dagli effetti che possono generare.
           </p>
 
           <a
-            href="mailto:giacinto@moovento.it"
+            href="mailto:giacinto@revealue.it"
             className="mt-16 inline-flex min-h-11 max-w-full items-center gap-5 border-b border-revealue-mineral/50 py-3 text-[10px] font-medium uppercase leading-snug tracking-[0.24em] text-revealue-ivory transition-colors duration-300 hover:border-revealue-copper hover:text-revealue-ivory focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-revealue-copper motion-reduce:transition-none sm:mt-20 sm:text-[11px] sm:tracking-[0.3em]"
           >
             Parliamo del tuo prossimo evento
