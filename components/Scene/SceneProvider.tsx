@@ -1,10 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 import {
   SceneContext,
-  VisualState,
+  type VisualRequest,
 } from "./SceneContext";
 
 type Props = {
@@ -14,15 +14,27 @@ type Props = {
 export default function SceneProvider({
   children,
 }: Props) {
-  const [visualState, setVisualState] =
-    useState<VisualState>("field");
+  const [visualRequest, setVisualRequest] =
+    useState<VisualRequest>({
+      visualState: "field",
+      transitionIntent: "default",
+    });
+
+  const requestVisualState = useCallback((request: VisualRequest) => {
+    setVisualRequest((current) =>
+      current.visualState === request.visualState &&
+      current.transitionIntent === request.transitionIntent
+        ? current
+        : request,
+    );
+  }, []);
 
   const value = useMemo(
     () => ({
-      visualState,
-      setVisualState,
+      visualRequest,
+      requestVisualState,
     }),
-    [visualState]
+    [requestVisualState, visualRequest]
   );
 
   return (

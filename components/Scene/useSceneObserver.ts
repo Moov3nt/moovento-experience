@@ -2,24 +2,32 @@
 
 import { useEffect, RefObject } from "react";
 
-import { VisualState } from "./SceneContext";
+import type { VisualRequest, VisualState } from "./SceneContext";
 import { useVisualState } from "./SceneContext";
 
 export function useSceneObserver(
   ref: RefObject<HTMLElement | null>,
-  visualState: VisualState
+  requestedVisual: VisualState | VisualRequest,
 ) {
-  const { setVisualState } = useVisualState();
+  const { requestVisualState } = useVisualState();
 
   useEffect(() => {
     const element = ref.current;
 
     if (!element) return;
 
+    const visualRequest: VisualRequest =
+      typeof requestedVisual === "string"
+        ? {
+            visualState: requestedVisual,
+            transitionIntent: "default",
+          }
+        : requestedVisual;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisualState(visualState);
+          requestVisualState(visualRequest);
         }
       },
       {
@@ -30,5 +38,5 @@ export function useSceneObserver(
     observer.observe(element);
 
     return () => observer.disconnect();
-  }, [ref, visualState, setVisualState]);
+  }, [ref, requestVisualState, requestedVisual]);
 }

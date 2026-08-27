@@ -2,12 +2,12 @@
 
 import { COLORS, ENGINE } from "./constants";
 import type { Edge, Hub } from "./types";
-import type { VisualPresentation } from "./scenes";
+import type { ResolvedVisualPresentation } from "./resolvePresentation";
 
 type Props = {
   hubs: Hub[];
   edges: Edge[];
-  presentation: VisualPresentation;
+  presentation: ResolvedVisualPresentation;
   energy: number[];
   breath: number;
 };
@@ -71,13 +71,19 @@ export default function Network({
       : ENGINE.glowRadius * 0.55;
 
   return (
-    <g key={`glow-${hub.id}`}>
+    <g
+      key={`glow-${hub.id}`}
+      opacity={presentation.hubIntensity}
+      style={{
+        transition: `opacity ${presentation.hubIntensityTransitionDurationMs}ms ease-in-out`,
+      }}
+    >
       <circle
         cx={hub.x}
         cy={hub.y}
         r={base * (1.8 + e * 0.6)}
         fill={COLORS.glow}
-        opacity={(0.015 + breath * 0.03 + e * 0.03) * presentation.hubIntensity}
+        opacity={0.015 + breath * 0.03 + e * 0.03}
       />
 
       <circle
@@ -85,7 +91,7 @@ export default function Network({
         cy={hub.y}
         r={base * (1.15 + e * 0.35)}
         fill={COLORS.glow}
-        opacity={(0.045 + breath * 0.05 + e * 0.06) * presentation.hubIntensity}
+        opacity={0.045 + breath * 0.05 + e * 0.06}
       />
     </g>
   );

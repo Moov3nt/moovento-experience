@@ -11,6 +11,16 @@ export type VisualState =
   | "relevance"
   | "action";
 
+export type VisualRequest =
+  | Readonly<{
+      visualState: VisualState;
+      transitionIntent: "default";
+    }>
+  | Readonly<{
+      visualState: "field";
+      transitionIntent: "closing";
+    }>;
+
 /** @deprecated Compatibility for the deferred sceneGraph module only. */
 export type Scene =
   | "hero"
@@ -21,8 +31,8 @@ export type Scene =
   | "cta";
 
 export type SceneContextType = {
-  visualState: VisualState;
-  setVisualState: (visualState: VisualState) => void;
+  visualRequest: VisualRequest;
+  requestVisualState: (visualRequest: VisualRequest) => void;
 };
 
 export const SceneContext =

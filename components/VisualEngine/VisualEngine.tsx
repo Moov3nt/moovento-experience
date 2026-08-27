@@ -1,28 +1,54 @@
 ﻿"use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Background from "./Background";
 import Network from "./Network";
 import Stars from "./Stars";
 import PulseRenderer from "./PulseRenderer";
 import { generateScene } from "./generator";
 import { VISUAL_PRESENTATIONS } from "./scenes";
-import type { VisualState } from "../Scene/SceneContext";
+import type { VisualRequest } from "../Scene/SceneContext";
 import { usePulseEngine } from "./engine/usePulseEngine";
 import { useHubEnergy } from "./engine/useHubEnergy";
 import { useNetworkBreath } from "./engine/useNetworkBreath";
 import PulseTrail from "./PulseTrail";
 import NodeFlash from "./NodeFlash";
 import { useEventEngine } from "./engine/useEventEngine";
+import { resolveVisualPresentation } from "./resolvePresentation";
 
 type Props = {
-  visualState: VisualState;
+  visualRequest: VisualRequest;
 };
 
+function usePrefersReducedMotion() {
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setPrefersReducedMotion(query.matches);
+
+    updatePreference();
+    query.addEventListener("change", updatePreference);
+
+    return () => query.removeEventListener("change", updatePreference);
+  }, []);
+
+  return prefersReducedMotion;
+}
+
 export default function VisualEngine({
-  visualState,
+  visualRequest,
 }: Props) {
-  const presentation = VISUAL_PRESENTATIONS[visualState];
+  const prefersReducedMotion = usePrefersReducedMotion();
+  const presentation = useMemo(
+    () =>
+      resolveVisualPresentation(
+        VISUAL_PRESENTATIONS[visualRequest.visualState],
+        visualRequest,
+        prefersReducedMotion,
+      ),
+    [prefersReducedMotion, visualRequest],
+  );
 
   const graph = useMemo(
     () => generateScene(),

@@ -3,18 +3,22 @@
 import { useRef } from "react";
 
 import { useSceneObserver } from "./Scene/useSceneObserver";
+import type { VisualRequest } from "./Scene/SceneContext";
 
 const headingId = "final-event-invitation-title";
+const closingFieldRequest = {
+  visualState: "field",
+  transitionIntent: "closing",
+} as const satisfies VisualRequest;
 
 export default function CTASection() {
-  const ref = useRef<HTMLElement>(null);
+  const closingBoundaryRef = useRef<HTMLHeadingElement>(null);
 
-  useSceneObserver(ref, "field");
+  useSceneObserver(closingBoundaryRef, closingFieldRequest);
 
   return (
     <section
       id="contatti"
-      ref={ref}
       aria-labelledby={headingId}
       className="relative flex min-h-screen items-center overflow-hidden font-sans text-revealue-ivory"
     >
@@ -32,6 +36,7 @@ export default function CTASection() {
         <div className="lg:col-span-7 lg:col-start-5">
           <h2
             id={headingId}
+            ref={closingBoundaryRef}
             className="max-w-[13ch] text-[clamp(3rem,6vw,6.25rem)] font-light leading-[0.94] tracking-[-0.055em] text-balance"
           >
             Ora possiamo osservare il tuo.
