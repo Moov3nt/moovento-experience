@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://www.moovento.it/sitemap.xml",
-    host: "https://www.moovento.it",
+    sitemap: "https://revealue.it/sitemap.xml",
+    host: "https://revealue.it",
   };
 }

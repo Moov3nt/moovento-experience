@@ -33,8 +33,10 @@ export default function AmbitiCTA() {
 
         <div className="mt-24">
 
-          <button
+          <a
+            href="mailto:giacinto@revealue.it"
             className="
+              inline-flex
               rounded-full
               border
               border-[#87996A]
@@ -50,7 +52,7 @@ export default function AmbitiCTA() {
             "
           >
             Inizia una conversazione
-          </button>
+          </a>
 
         </div>
 

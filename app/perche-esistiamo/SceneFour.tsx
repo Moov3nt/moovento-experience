@@ -41,7 +41,7 @@ export default function SceneFour() {
           <Statement delay={1}>
             Da quella visione
             <br />
-            è nata Moovento.
+            è nata REVEALUE.
             <br />
             Non per semplificare,
             <br />

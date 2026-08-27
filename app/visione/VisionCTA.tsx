@@ -30,9 +30,11 @@ export default function VisionCTA() {
 
         </p>
 
-        <button
+        <a
+          href="/ambiti"
           className="
             mt-20
+            inline-flex
             rounded-full
             border
             border-[#A8B68A]
@@ -47,8 +49,8 @@ export default function VisionCTA() {
             hover:text-black
           "
         >
-          Inizia una conversazione
-        </button>
+          Esplora gli ambiti
+        </a>
 
       </div>
 

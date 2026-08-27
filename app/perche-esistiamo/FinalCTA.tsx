@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import Reveal from "@/components/Reveal";
 
 export default function FinalCTA() {
@@ -30,8 +32,8 @@ export default function FinalCTA() {
         </Reveal>
 
         <Reveal delay={0.8}>
-          <a
-            href="/contatti"
+          <Link
+            href="/#contatti"
             className="
               mt-20
               inline-flex
@@ -52,7 +54,7 @@ export default function FinalCTA() {
           >
             Parliamone
             <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </Reveal>
 
       </div>

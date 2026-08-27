@@ -19,15 +19,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.moovento.it"),
+  metadataBase: new URL("https://revealue.it"),
 
   title: {
-    default: "Moovento | Rendere visibile il valore invisibile",
-    template: "%s | Moovento",
+    default: "REVEALUE | Event intelligence",
+    template: "%s | REVEALUE",
   },
 
   description:
-    "Moovento comprende come evolvono i sistemi complessi per trasformare evidenze e relazioni in decisioni responsabili, azioni coordinate e apprendimento.",
+    "REVEALUE comprende come evolvono i sistemi complessi per trasformare evidenze e relazioni in decisioni responsabili, azioni coordinate e apprendimento.",
 
   alternates: {
     canonical: "/",
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "it_IT",
     url: "/",
-    siteName: "Moovento",
-    title: "Moovento | Rendere visibile il valore invisibile",
+    siteName: "REVEALUE",
+    title: "REVEALUE | Event intelligence",
     description:
       "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
     images: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Moovento | Rendere visibile il valore invisibile",
+    title: "REVEALUE | Event intelligence",
     description:
       "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
     images: ["/opengraph-image"],

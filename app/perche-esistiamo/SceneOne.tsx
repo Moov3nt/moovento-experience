@@ -25,7 +25,7 @@ export default function SceneOne() {
 
             <br />
 
-            Moovento?
+            REVEALUE?
 
           </Statement>
 
