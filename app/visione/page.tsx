@@ -1,10 +1,6 @@
-import Hero from "./Hero";
-import Problem from "./Problem";
-import Paradigm from "./Paradigm";
-import Approach from "./Approach";
-import Future from "./Future";
-import VisionCTA from "./VisionCTA";
 import type { Metadata } from "next";
+
+import VisionEssay from "./VisionEssay";
 
 export const metadata: Metadata = {
   title: "Visione",
@@ -15,15 +11,5 @@ export const metadata: Metadata = {
   },
 };
 export default function VisionPage() {
-  return (
-    <main className="bg-[#0D0F10] text-white">
-      <Hero />
-      <Problem />
-      <Paradigm />
-      <Approach />
-      <Future />
-      <VisionCTA />
-
-    </main>
-  );
+  return <VisionEssay />;
 }
