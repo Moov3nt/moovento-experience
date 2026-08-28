@@ -20,6 +20,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://revealue.it"),
+  applicationName: "REVEALUE",
 
   title: {
     default: "REVEALUE | Event intelligence",
@@ -43,10 +44,10 @@ export const metadata: Metadata = {
       "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/revealue-social.png",
         width: 1200,
         height: 630,
-        alt: "Moovento — Rendere visibile il valore invisibile",
+        alt: "REVEALUE — Event Intelligence",
       },
     ],
   },
@@ -56,7 +57,10 @@ export const metadata: Metadata = {
     title: "REVEALUE | Event intelligence",
     description:
       "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
-    images: ["/opengraph-image"],
+    images: {
+      url: "/revealue-social.png",
+      alt: "REVEALUE — Event Intelligence",
+    },
   },
 
   robots: {
