@@ -73,14 +73,25 @@ test("resolves closing FIELD without changing its destination targets", () => {
   assert.equal(resolved.flashEnabled, false);
 });
 
-test("settles closing FIELD immediately for reduced motion", () => {
-  const resolved = resolveVisualPresentation(
+test("settles every presentation immediately for reduced motion", () => {
+  for (const visualState of ["field", "system", "relevance", "action"]) {
+    const resolved = resolveVisualPresentation(
+      fieldPresentation,
+      { visualState, transitionIntent: "default" },
+      true,
+    );
+
+    assert.equal(resolved.transitionDurationMs, 0);
+    assert.equal(resolved.hubIntensityTransitionDurationMs, 0);
+    assert.equal(resolved.hubIntensity, 0.5);
+  }
+
+  const closing = resolveVisualPresentation(
     fieldPresentation,
     { visualState: "field", transitionIntent: "closing" },
     true,
   );
 
-  assert.equal(resolved.transitionDurationMs, 0);
-  assert.equal(resolved.hubIntensityTransitionDurationMs, 0);
-  assert.equal(resolved.hubIntensity, 0.5);
+  assert.equal(closing.transitionDurationMs, 0);
+  assert.equal(closing.hubIntensityTransitionDurationMs, 0);
 });

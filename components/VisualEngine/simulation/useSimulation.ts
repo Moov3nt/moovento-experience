@@ -6,7 +6,7 @@ import type { Pulse } from "./types";
 
 export function useSimulation() {
 
-  const [pulses, setPulses] =
+  const [pulses] =
     useState<Pulse[]>([
       {
         id: 0,

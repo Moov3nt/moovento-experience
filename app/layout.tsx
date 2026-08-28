@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import BackgroundField from "../components/BackgroundField";
-import SceneProvider from "../components/Scene/SceneProvider";
+import SceneRuntime from "../components/Scene/SceneRuntime";
 
 import SiteHeader from "../components/SiteHeader"
 import { Analytics } from "@vercel/analytics/next";
@@ -83,7 +83,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-black text-white">
-        <SceneProvider>
+        <SceneRuntime>
           <BackgroundField />
 
           <div className="relative z-20">
@@ -93,7 +93,7 @@ export default function RootLayout({
           <main className="relative z-10">
             {children}
           </main>
-        </SceneProvider>
+        </SceneRuntime>
 
         <Analytics />
       </body>

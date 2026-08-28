@@ -33,7 +33,7 @@ export default function ImpactSection() {
       <div className="mx-auto max-w-7xl px-8 lg:px-16">
 
         <span className="text-[11px] uppercase tracking-[0.45em] text-[#A8B68A]">
-          L'IMPATTO
+          L&apos;IMPATTO
         </span>
 
         <h2 className="mt-8 max-w-5xl text-[56px] font-light leading-[1.02] tracking-[-0.04em] md:text-[88px]">

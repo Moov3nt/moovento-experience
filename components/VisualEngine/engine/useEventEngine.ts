@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function useEventEngine(
   activeHub: number,
+  enabled = true,
 ) {
   const previous =
     useRef(activeHub);
@@ -12,6 +13,11 @@ export function useEventEngine(
     useState(-1);
 
   useEffect(() => {
+    if (!enabled) {
+      previous.current = activeHub;
+      return;
+    }
+
     if (
       activeHub !== previous.current
     ) {
@@ -28,10 +34,10 @@ export function useEventEngine(
       return () =>
         clearTimeout(timer);
     }
-  }, [activeHub]);
+  }, [activeHub, enabled]);
 
   return {
-    flashHub,
+    flashHub: enabled ? flashHub : -1,
   };
 }
 

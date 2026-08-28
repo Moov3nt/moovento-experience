@@ -24,7 +24,7 @@ export default function Problem() {
 
             Lo è
             <br />
-            l'incapacità
+            l&apos;incapacità
             <br />
             di leggerla.
 

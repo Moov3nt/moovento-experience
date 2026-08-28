@@ -57,10 +57,10 @@ export default function VisualEngine({
 
   const pulse = usePulseEngine(
     graph.edges,
-    graph.navigator,
+    !prefersReducedMotion,
   );
 
-  const breath = useNetworkBreath();
+  const breath = useNetworkBreath(!prefersReducedMotion);
 
   const activeHub =
   graph.edges[pulse.edgeIndex]?.to ?? -1;
@@ -70,7 +70,7 @@ export default function VisualEngine({
   activeHub,
   );
 
-  const { flashHub } = useEventEngine(activeHub);
+  const { flashHub } = useEventEngine(activeHub, !prefersReducedMotion);
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -13,6 +13,14 @@ export function resolveVisualPresentation(
   request: VisualRequest,
   prefersReducedMotion: boolean,
 ): ResolvedVisualPresentation {
+  if (prefersReducedMotion) {
+    return {
+      ...presentation,
+      transitionDurationMs: 0,
+      hubIntensityTransitionDurationMs: 0,
+    };
+  }
+
   if (request.transitionIntent !== "closing") {
     return {
       ...presentation,
@@ -20,13 +28,9 @@ export function resolveVisualPresentation(
     };
   }
 
-  const transitionDurationMs = prefersReducedMotion
-    ? 0
-    : CLOSING_TRANSITION_DURATION_MS;
-
   return {
     ...presentation,
-    transitionDurationMs,
-    hubIntensityTransitionDurationMs: transitionDurationMs,
+    transitionDurationMs: CLOSING_TRANSITION_DURATION_MS,
+    hubIntensityTransitionDurationMs: CLOSING_TRANSITION_DURATION_MS,
   };
 }

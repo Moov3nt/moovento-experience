@@ -14,7 +14,7 @@ const closingFieldRequest = {
 export default function CTASection() {
   const closingBoundaryRef = useRef<HTMLHeadingElement>(null);
 
-  useSceneObserver(closingBoundaryRef, closingFieldRequest);
+  useSceneObserver(closingBoundaryRef, closingFieldRequest, "action");
 
   return (
     <section

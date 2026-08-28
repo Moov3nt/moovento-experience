@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 
-export function useNetworkBreath() {
+export function useNetworkBreath(enabled = true) {
   const [breath, setBreath] =
     useState(0);
 
   useEffect(() => {
+    if (!enabled) return;
+
     let frame: number;
 
     const start =
@@ -36,9 +38,9 @@ export function useNetworkBreath() {
 
     return () =>
       cancelAnimationFrame(frame);
-  }, []);
+  }, [enabled]);
 
-  return breath;
+  return enabled ? breath : 0;
 }
 
 

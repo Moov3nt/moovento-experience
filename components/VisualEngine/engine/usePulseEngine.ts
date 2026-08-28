@@ -6,7 +6,6 @@ import {
 } from "react";
 
 import type { Edge } from "../types";
-import type { GraphNavigator } from "../navigator";
 
 export type PulseState = {
   edgeIndex: number;
@@ -15,7 +14,7 @@ export type PulseState = {
 
 export function usePulseEngine(
   edges: Edge[],
-  _navigator: GraphNavigator,
+  enabled = true,
 ) {
   const [pulse, setPulse] =
     useState<PulseState>({
@@ -24,7 +23,7 @@ export function usePulseEngine(
     });
 
   useEffect(() => {
-    if (edges.length === 0) return;
+    if (!enabled || edges.length === 0) return;
 
     let frame: number;
 
@@ -63,7 +62,7 @@ export function usePulseEngine(
 
     return () =>
       cancelAnimationFrame(frame);
-  }, [edges]);
+  }, [edges, enabled]);
 
   return pulse;
 }
