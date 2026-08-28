@@ -83,6 +83,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full overflow-x-hidden bg-black text-white">
+        <a
+          href="#main-content"
+          className="sr-only left-4 top-4 z-[100] rounded-sm bg-[#080a0b] px-4 py-3 text-sm font-medium text-revealue-ivory focus:not-sr-only focus:!fixed focus:outline-2 focus:outline-offset-4 focus:outline-revealue-copper"
+        >
+          Vai al contenuto principale
+        </a>
+
         <SceneRuntime>
           <BackgroundField />
 
@@ -90,7 +97,7 @@ export default function RootLayout({
            <SiteHeader />
           </div>
 
-          <main className="relative z-10">
+          <main id="main-content" tabIndex={-1} className="relative z-10">
             {children}
           </main>
         </SceneRuntime>
