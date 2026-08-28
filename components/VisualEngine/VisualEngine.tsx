@@ -73,7 +73,10 @@ export default function VisualEngine({
   const { flashHub } = useEventEngine(activeHub, !prefersReducedMotion);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div
+      className="absolute inset-0 overflow-hidden pointer-events-none"
+      aria-hidden="true"
+    >
       <svg
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid slice"
