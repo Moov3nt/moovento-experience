@@ -80,7 +80,7 @@ export default function VisualEngine({
       <svg
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid slice"
-        className="w-full h-full"
+        className="absolute left-0 top-1/2 h-auto w-full -translate-y-1/2 md:static md:h-full md:translate-y-0"
         style={{
           opacity: presentation.fieldOpacity,
           transition: `opacity ${presentation.transitionDurationMs}ms ease-in-out`,
