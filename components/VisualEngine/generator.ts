@@ -15,6 +15,8 @@ type Cluster = {
   y: number;
 };
 
+const stableNumber = (value: number) => Number(value.toFixed(6));
+
 const CLUSTERS: Cluster[] = [
   { x: 26, y: 28 }, // dominante
   { x: 42, y: 66 },
@@ -57,13 +59,15 @@ function createHubs(multiplier: number): Hub[] {
       hubs.push({
         id,
 
-        x:
+        x: stableNumber(
           cluster.x +
           Math.cos(angle) * distance,
+        ),
 
-        y:
+        y: stableNumber(
           cluster.y +
           Math.sin(angle) * distance,
+        ),
 
         radius:
           clusterIndex === 0 && i === 0
@@ -116,24 +120,30 @@ function createStars(starCount: number): Star[] {
     stars.push({
       id: i,
 
-      x:
+      x: stableNumber(
         cluster.x +
         Math.cos(angle) * radius,
-
-      y:
-        cluster.y +
-        Math.sin(angle) * radius,
-
-      radius: lerp(
-        cfg.radius[0],
-        cfg.radius[1],
-        hash(ENGINE.seed, i * 5)
       ),
 
-      opacity: lerp(
-        cfg.opacity[0],
-        cfg.opacity[1],
-        hash(ENGINE.seed, i * 7)
+      y: stableNumber(
+        cluster.y +
+        Math.sin(angle) * radius,
+      ),
+
+      radius: stableNumber(
+        lerp(
+          cfg.radius[0],
+          cfg.radius[1],
+          hash(ENGINE.seed, i * 5)
+        ),
+      ),
+
+      opacity: stableNumber(
+        lerp(
+          cfg.opacity[0],
+          cfg.opacity[1],
+          hash(ENGINE.seed, i * 7)
+        ),
       ),
 
       depth,

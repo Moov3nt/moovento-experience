@@ -3,15 +3,14 @@ import { OPERATIONAL_PROOF } from "@/components/OperationalProof/operationalProo
 export type ProductMaturity =
   | "demonstrable-now"
   | "architecturally-supported"
-  | "conceptually-extensible"
+  | "unknown"
   | "future";
 
 export type EvidenceKind =
-  | "measured"
-  | "supported-relationship"
-  | "retained-evidence"
+  | "modelled"
+  | "derived"
+  | "unknown"
   | "architecture"
-  | "extension"
   | "future";
 
 export type OperationalTerritory = Readonly<{
@@ -30,92 +29,83 @@ type MaturityLevel = Readonly<{
   statement: string;
 }>;
 
-function requireRelationship(dimension: string) {
-  const relationship = OPERATIONAL_PROOF.relationships.find(
-    (candidate) => candidate.dimension === dimension,
-  );
-
-  if (!relationship) {
-    throw new Error(
-      `Ambiti requires the “${dimension}” operational relationship.`,
-    );
-  }
-
-  return relationship;
-}
-
-const access = requireRelationship("Flussi di accesso");
-const coordination = requireRelationship("Coordinamento operativo");
-const knowledge = requireRelationship("Conoscenza dell’evento");
-
 export const AMBITI_MODEL = Object.freeze({
-  scenario: OPERATIONAL_PROOF.scenario,
-  origin: {
-    condition: OPERATIONAL_PROOF.situation,
-    intervention: OPERATIONAL_PROOF.intervention.action,
+  scenario: {
+    name: `${OPERATIONAL_PROOF.id} · ${OPERATIONAL_PROOF.title}`,
+    classification: OPERATIONAL_PROOF.classification,
   },
-  measuredFacts: OPERATIONAL_PROOF.measuredFacts,
+  origin: {
+    condition: {
+      label: "Occupazione parcheggi iniziale · MODELLED",
+      value: OPERATIONAL_PROOF.outcomes[0].initial,
+    },
+    intervention: OPERATIONAL_PROOF.decision.selectedAction,
+  },
+  derivedOutcomes: OPERATIONAL_PROOF.outcomes,
   territories: [
     {
       id: "mobility",
-      label: OPERATIONAL_PROOF.measuredDimension,
+      label: "Mobilità: parcheggi e traffico",
       maturity: "demonstrable-now",
-      evidenceKind: "measured",
-      statusLabel: "Misurato nello scenario",
+      evidenceKind: "derived",
+      statusLabel: "Output derivati · scenario modellato",
     },
     {
       id: "access",
-      label: access.dimension,
-      maturity: "demonstrable-now",
-      evidenceKind: "supported-relationship",
-      statusLabel: "Relazione supportata · non misurata come KPI",
-      evidence: access.evidence,
+      label: "Accessibilità e accessi alla venue",
+      maturity: "unknown",
+      evidenceKind: "unknown",
+      statusLabel: "Dimensione di valutazione · impatto reale sconosciuto",
+      evidence:
+        "La dimensione appartiene al contesto di mobilità, ma RV-03 non stabilisce un effetto reale su accessibilità o accessi.",
     },
     {
       id: "coordination",
-      label: coordination.dimension,
-      maturity: "demonstrable-now",
-      evidenceKind: "supported-relationship",
-      statusLabel: "Relazione supportata · non misurata come KPI",
-      evidence: coordination.evidence,
+      label: "Coordinamento operativo",
+      maturity: "architecturally-supported",
+      evidenceKind: "architecture",
+      statusLabel: "Tracciabilità dimostrata nello scenario controllato",
+      evidence:
+        "Due azioni candidate conducono a una Decisione governata e a una Missione; non è dimostrata un’esecuzione sul campo.",
     },
     {
       id: "knowledge",
-      label: knowledge.dimension,
-      maturity: "demonstrable-now",
-      evidenceKind: "retained-evidence",
-      statusLabel: "Evidenza registrata nello scenario",
-      evidence: OPERATIONAL_PROOF.retainedEvidence.statement,
+      label: "Conoscenza dell’evento",
+      maturity: "unknown",
+      evidenceKind: "unknown",
+      statusLabel: "Learning non stabilito",
+      evidence:
+        "Senza osservazioni reali e ricevute durevoli di esecuzione, non può essere dichiarato un apprendimento operativo.",
     },
   ] satisfies readonly OperationalTerritory[],
   maturityLevels: [
     {
       maturity: "demonstrable-now",
-      label: "Dimostrabile ora",
-      evidenceKind: "measured",
+      label: "Dimostrato nello scenario controllato",
+      evidenceKind: "derived",
       statement:
-        "Misure registrate nella mobilità; relazioni supportate negli accessi, nel coordinamento e nella conoscenza dell’evento.",
+        "Input modellati, due alternative, una Decisione governata, una Missione e output derivati con esiti di direzione diversa.",
     },
     {
       maturity: "architecturally-supported",
       label: "Architetturalmente supportato",
       evidenceKind: "architecture",
       statement:
-        "Situazione, responsabilità, intervento, esito ed evidenza possono restare nello stesso percorso operativo.",
+        "Evidenze, interpretazione, Decisione, Missione ed effetti possono restare nello stesso percorso tracciabile.",
     },
     {
-      maturity: "conceptually-extensible",
-      label: "Concettualmente estensibile",
-      evidenceKind: "extension",
+      maturity: "unknown",
+      label: "Sconosciuto nel mondo reale",
+      evidenceKind: "unknown",
       statement:
-        "Nuove dimensioni richiedono fonti, responsabilità e criteri di evidenza propri.",
+        "Impatto operativo, causalità, valore economico, risultato ESG e Learning richiedono dati reali e valutazione successiva.",
     },
     {
       maturity: "future",
-      label: "Futuro",
+      label: "Altri contesti",
       evidenceKind: "future",
       statement:
-        "Contesti non ancora qualificati restano possibilità, non capacità dichiarate.",
+        "L’estensione ad altri sistemi resta una possibilità da qualificare con fonti, responsabilità e criteri propri.",
     },
   ] satisfies readonly MaturityLevel[],
 });

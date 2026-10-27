@@ -32,12 +32,12 @@ const actionPresentation: Readonly<
     confirmationTitle: "Avviare la Missione?",
   },
   "record-mission-achieved": {
-    label: "Registra Missione raggiunta",
-    confirmationTitle: "Registrare la Missione come raggiunta?",
+    label: "Registra output derivato",
+    confirmationTitle: "Registrare l’output derivato nello scenario?",
   },
   "record-outcome": {
-    label: "Registra esito",
-    confirmationTitle: "Registrare l’esito?",
+    label: "Chiudi scenario controllato",
+    confirmationTitle: "Chiudere il percorso dimostrativo?",
   },
 };
 
@@ -54,7 +54,7 @@ type ConfirmationIntent =
     }>;
 
 const illustrativeConsequence =
-  "Questa azione aggiorna soltanto lo scenario illustrativo.";
+  "Questa azione aggiorna soltanto lo scenario sintetico controllato.";
 
 type OperationalDashboardProps = {
   labelledBy?: string;
@@ -176,8 +176,8 @@ export default function OperationalDashboard({
             {committedStage.terminalStatus}
           </p>
           <p className="mt-4 max-w-3xl text-xl font-light leading-relaxed text-white">
-            Lesito registrato diventa nuova evidenza per comprendere levoluzione
-            dellevento.
+            L&apos;output derivato resta nel percorso dimostrativo; non costituisce
+            Learning automatico né prova di impatto reale.
           </p>
         </div>
       )}

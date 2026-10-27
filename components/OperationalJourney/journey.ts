@@ -1,4 +1,4 @@
-import { ROMA_SUMMER_LIVE_STAGES } from "./scenario";
+import { RV03_CONTROLLED_STAGES } from "./scenario";
 import type { JourneyAction, StageSnapshot } from "./types";
 
 const transitions: Readonly<
@@ -16,11 +16,11 @@ const transitions: Readonly<
 });
 
 export function initialStage(): StageSnapshot {
-  return ROMA_SUMMER_LIVE_STAGES[0];
+  return RV03_CONTROLLED_STAGES[0];
 }
 
 export function currentStage(position: number): StageSnapshot | undefined {
-  return ROMA_SUMMER_LIVE_STAGES[position - 1];
+  return RV03_CONTROLLED_STAGES[position - 1];
 }
 
 export function availableAction(stage: StageSnapshot): JourneyAction | undefined {

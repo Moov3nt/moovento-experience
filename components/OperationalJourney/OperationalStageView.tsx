@@ -132,7 +132,7 @@ export default function OperationalStageView({
               label="Ruolo responsabile"
               value={governance.accountableRole}
             />
-            <Detail label="Registrata" value={governance.recordedAt} />
+            <Detail label="Timestamp dello scenario" value={governance.recordedAt} />
           </dl>
           <p className="mt-6 leading-relaxed text-neutral-300">
             {governance.statement}
@@ -195,10 +195,10 @@ export default function OperationalStageView({
             id="operational-outcome-title"
             className="mt-3 text-2xl font-light tracking-[-0.025em] text-white"
           >
-            Outcome registrato
+            Output derivato
           </h3>
           <p className="mt-3 text-sm text-neutral-500">
-            Registrato: {outcome.recordedAt}
+            Prodotto nello scenario: {outcome.recordedAt}
           </p>
           <p className="mt-5 leading-relaxed text-neutral-300">
             {outcome.summary}
@@ -210,8 +210,8 @@ export default function OperationalStageView({
                   {measure.label}
                 </dt>
                 <dd className="mt-3 grid gap-1 text-sm text-neutral-300">
-                  <span>Pianificato: {measure.planned}</span>
-                  <span className="text-white">Registrato: {measure.recorded}</span>
+                  <span>Input: {measure.planned}</span>
+                  <span className="text-white">Output: {measure.recorded}</span>
                 </dd>
               </div>
             ))}

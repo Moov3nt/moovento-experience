@@ -19,7 +19,7 @@ const maturityPositions = [
 
 function TerritoryStatus({ territory }: { territory: OperationalTerritory }) {
   return (
-    <span className="text-[9px] font-medium uppercase tracking-[0.22em] text-revealue-mineral">
+    <span className="text-xs font-medium uppercase tracking-[0.18em] text-revealue-mineral">
       {territory.statusLabel}
     </span>
   );
@@ -48,32 +48,35 @@ function PropagationCrossing() {
   );
 }
 
-function MeasuredTerritory() {
+function DerivedTerritory() {
   return (
     <dl className="mt-12 grid gap-10 sm:grid-cols-2">
-      {AMBITI_MODEL.measuredFacts.map((fact) => (
-        <div key={fact.label} className="border-t border-revealue-copper/55 pt-5">
+      {AMBITI_MODEL.derivedOutcomes.map((outcome) => (
+        <div key={outcome.id} className="border-t border-revealue-copper/55 pt-5">
           <dt className="min-h-11 text-sm leading-relaxed text-revealue-mineral">
-            {fact.label}
+            MODELLED / DERIVED · {outcome.label} · {outcome.measure}
           </dt>
           <dd className="mt-7 grid grid-cols-2 gap-5">
             <span>
-              <span className="block text-[9px] uppercase tracking-[0.22em] text-revealue-mineral">
-                Target
+              <span className="block text-xs uppercase tracking-[0.18em] text-revealue-mineral">
+                Iniziale · MODELLED
               </span>
               <span className="mt-2 block text-2xl font-light">
-                {fact.target}
+                {outcome.initial}
               </span>
             </span>
             <span>
-              <span className="block text-[9px] uppercase tracking-[0.22em] text-revealue-mineral">
-                Registrato
+              <span className="block text-xs uppercase tracking-[0.18em] text-revealue-mineral">
+                Finale · MODELLED
               </span>
               <span className="mt-2 block text-[clamp(2.5rem,4.5vw,4rem)] font-light leading-none tracking-[-0.05em] text-revealue-ivory">
-                {fact.recorded}
+                {outcome.final}
               </span>
             </span>
           </dd>
+          <p className="mt-5 text-sm leading-relaxed text-revealue-mineral">
+            DERIVED · {outcome.delta} · {outcome.directionLabel}
+          </p>
         </div>
       ))}
     </dl>
@@ -135,7 +138,7 @@ export default function AmbitiPropagation() {
             </h2>
             <div className="lg:col-span-7 lg:col-start-5">
               <p className="text-[10px] font-medium uppercase tracking-[0.28em] text-revealue-copper">
-                Scenario illustrativo · {AMBITI_MODEL.scenario.name}
+                Scenario sintetico controllato · {AMBITI_MODEL.scenario.name}
               </p>
               <p className="mt-9 max-w-[22ch] text-xl font-light leading-relaxed text-revealue-mineral sm:text-2xl">
                 {AMBITI_MODEL.origin.condition.label}
@@ -159,7 +162,7 @@ export default function AmbitiPropagation() {
               03 · Le conseguenze attraversano i territori
             </h2>
             <p className="max-w-[18ch] text-[clamp(2.75rem,5.2vw,5.5rem)] font-light leading-[1.02] tracking-[-0.05em] lg:col-span-7 lg:col-start-5">
-              L’effetto misurato non esaurisce ciò che cambia.
+              Un output derivato non esaurisce ciò che può cambiare.
             </p>
           </div>
 
@@ -171,7 +174,7 @@ export default function AmbitiPropagation() {
                 <h3 className="mt-4 text-3xl font-light tracking-[-0.035em]">
                   {mobility.label}
                 </h3>
-                <MeasuredTerritory />
+                <DerivedTerritory />
               </li>
 
               {relatedTerritories.map((territory, index) => (
@@ -245,8 +248,9 @@ export default function AmbitiPropagation() {
                 La prima profondità non definisce l’intero sistema.
               </p>
               <p className="mt-12 max-w-[38rem] text-xl font-light leading-[1.65] text-revealue-mineral sm:text-2xl">
-                Mobilità e parcheggi mostrano ciò che oggi è dimostrabile.
-                Altre dimensioni diventano credibili solo quando relazioni ed
+                La mobilità è il primo contesto concreto. Gli output di RV-03
+                restano derivati da uno scenario modellato; altri contesti
+                diventano credibili solo quando fonti, responsabilità ed
                 evidenze possono essere qualificate.
               </p>
               <a

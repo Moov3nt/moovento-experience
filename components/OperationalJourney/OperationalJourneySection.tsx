@@ -22,7 +22,9 @@ export default function OperationalJourneySection() {
         <div className="mt-20"><OperationalDashboard labelledBy={headingId} /></div>
         <div className="mt-20 border-t border-white/10 pt-10">
           <p className="max-w-3xl text-xl leading-relaxed text-neutral-300 md:text-2xl">
-            Quando l&apos;esito viene valutato, l&apos;esperienza non si disperde: diventa nuova conoscenza per le decisioni future.
+            Quando un esito reale viene osservato e valutato, può contribuire a
+            nuova conoscenza. Lo scenario controllato, da solo, non dimostra
+            Learning.
           </p>
         </div>
       </div>

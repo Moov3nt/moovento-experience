@@ -1,51 +1,47 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { ROMA_SUMMER_LIVE_STAGES } from "./scenario";
+import { RV03_CONTROLLED_STAGES } from "./scenario";
 
 test("defines the exact deterministic initial snapshot", () => {
-  assert.deepEqual(ROMA_SUMMER_LIVE_STAGES[0], {
+  assert.deepEqual(RV03_CONTROLLED_STAGES[0], {
     id: "STAGE-01-IDENTIFIED",
     key: "identified",
     position: 1,
     timestamp: "2026-07-18T16:40:00+02:00",
     eventContext: {
-      id: "EVT-ROMA-SUMMER-LIVE-2026",
-      name: "Roma Summer Live",
-      place: "Foro Italico, Roma",
-      window: "18 luglio 2026, 18:00–23:30",
+      id: "EVT-RV03-CONTROLLED",
+      name: "RV-03 · Mobilità di un grande evento",
+      place: "Scenario sintetico controllato",
+      window: "Finestra temporale modellata",
     },
     situation: {
-      id: "SIT-PARKING-PRESSURE-001",
-      title: "Pressione prevista sui parcheggi primari",
+      id: "SIT-RV03-MOBILITY-001",
+      title: "Condizioni iniziali modellate",
       observedAt: "2026-07-18T16:40:00+02:00",
       summary:
-        "Gli arrivi previsti superano la capacità utile dell’area primaria e si concentrano prima dell’apertura dei cancelli.",
+        "Gli input appartengono a una dimostrazione controllata e non sono misure raccolte sul campo.",
       evidence: [
-        { label: "Arrivi previsti entro le 20:30", value: "6.800 veicoli" },
-        { label: "Posti disponibili nell’area primaria", value: "4.900" },
-        { label: "Occupazione prevista alle 20:00", value: "96%" },
-        { label: "Area secondaria disponibile", value: "1.450 posti" },
-        {
-          label: "Pressione identificata",
-          value: "Accessi concentrati su due varchi",
-        },
+        { label: "Occupazione parcheggi iniziale · MODELLED", value: "96%" },
+        { label: "Rapporto velocità relativa iniziale · MODELLED", value: "0,40" },
+        { label: "Azioni candidate", value: "2" },
+        { label: "Impatto reale", value: "UNKNOWN" },
       ],
     },
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "identified",
       statusLabel: "Identificata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
     },
   });
 });
 
 test("keeps exact stage ordering, identifiers, and timestamps", () => {
   assert.deepEqual(
-    ROMA_SUMMER_LIVE_STAGES.map(({ id, key, position, timestamp }) => ({
+    RV03_CONTROLLED_STAGES.map(({ id, key, position, timestamp }) => ({
       id,
       key,
       position,
@@ -71,5 +67,5 @@ test("deep-freezes every scenario snapshot", () => {
     Object.values(value).forEach(assertDeeplyFrozen);
   };
 
-  assertDeeplyFrozen(ROMA_SUMMER_LIVE_STAGES);
+  assertDeeplyFrozen(RV03_CONTROLLED_STAGES);
 });

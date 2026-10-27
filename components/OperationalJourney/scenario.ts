@@ -20,92 +20,88 @@ function immutable<T>(value: T): Readonly<T> {
 }
 
 const eventContext: EventContext = {
-  id: "EVT-ROMA-SUMMER-LIVE-2026",
-  name: "Roma Summer Live",
-  place: "Foro Italico, Roma",
-  window: "18 luglio 2026, 18:00–23:30",
+  id: "EVT-RV03-CONTROLLED",
+  name: "RV-03 · Mobilità di un grande evento",
+  place: "Scenario sintetico controllato",
+  window: "Finestra temporale modellata",
 };
 
 const situation: Situation = {
-  id: "SIT-PARKING-PRESSURE-001",
-  title: "Pressione prevista sui parcheggi primari",
+  id: "SIT-RV03-MOBILITY-001",
+  title: "Condizioni iniziali modellate",
   observedAt: "2026-07-18T16:40:00+02:00",
   summary:
-    "Gli arrivi previsti superano la capacità utile dell’area primaria e si concentrano prima dell’apertura dei cancelli.",
+    "Gli input appartengono a una dimostrazione controllata e non sono misure raccolte sul campo.",
   evidence: [
-    { label: "Arrivi previsti entro le 20:30", value: "6.800 veicoli" },
-    { label: "Posti disponibili nell’area primaria", value: "4.900" },
-    { label: "Occupazione prevista alle 20:00", value: "96%" },
-    { label: "Area secondaria disponibile", value: "1.450 posti" },
-    {
-      label: "Pressione identificata",
-      value: "Accessi concentrati su due varchi",
-    },
+    { label: "Occupazione parcheggi iniziale · MODELLED", value: "96%" },
+    { label: "Rapporto velocità relativa iniziale · MODELLED", value: "0,40" },
+    { label: "Azioni candidate", value: "2" },
+    { label: "Impatto reale", value: "UNKNOWN" },
   ],
 };
 
 const plannedMission: Mission = {
-  id: "MIS-PARKING-GUIDANCE-001",
-  title: "Attivare l’indirizzamento verso il parcheggio secondario",
+  id: "MIS-RV03-001",
+  title: "Private-Vehicle Arrival Window Staggering",
   status: "planned",
   statusLabel: "Pianificata",
-  accountableTeam: "Squadra Mobilità Nord",
+  accountableTeam: "Ruolo non specificato nei materiali RV-03",
   target:
-    "Portare almeno 900 veicoli verso l’area secondaria entro le 20:30",
-  scheduledWindow: "18 luglio 2026, 17:30–20:30",
+    "Target operativo non specificato nei materiali RV-03",
+  scheduledWindow: "Finestra modellata · dettaglio non disponibile",
 };
 
 const startedMission: Mission = {
   ...plannedMission,
   status: "started",
-  statusLabel: "Avviata",
-  progressCopy: "Indirizzamento operativo in corso.",
+  statusLabel: "Transizione simulata",
+  progressCopy: "Passaggio dimostrativo; non attesta un’esecuzione sul campo.",
 };
 
 const achievedMission: Mission = {
   ...plannedMission,
   status: "achieved",
-  statusLabel: "Raggiunta",
+  statusLabel: "Output derivato",
   achievementValues: [
-    { label: "Veicoli indirizzati", value: "1.040" },
-    { label: "Occupazione massima area primaria", value: "87%" },
-    { label: "Target Missione", value: "≥ 900 veicoli" },
+    { label: "Occupazione parcheggi finale · DERIVED", value: "98%" },
+    { label: "Rapporto velocità relativa finale · DERIVED", value: "0,60" },
+    { label: "Risultati KPI proiettati, sola lettura", value: "4" },
   ],
 };
 
 const outcome: Outcome = {
-  id: "OUT-PARKING-GUIDANCE-001",
+  id: "OUT-RV03-DERIVED-001",
   recordedAt: "2026-07-18T20:45:00+02:00",
   summary:
-    "La distribuzione degli arrivi ha mantenuto l’area primaria sotto la soglia prevista e ha ridotto la concentrazione ai varchi.",
+    "Gli output sono derivati dal sistema nello scenario controllato; l’impatto reale resta sconosciuto.",
   measures: [
     {
-      label: "Veicoli verso area secondaria",
-      planned: "≥ 900",
-      recorded: "1.040",
+      label: "Occupazione parcheggi",
+      planned: "96% · MODELLED",
+      recorded: "98% · DERIVED",
     },
     {
-      label: "Occupazione area primaria",
-      planned: "< 90%",
-      recorded: "87%",
+      label: "Rapporto velocità relativa traffico",
+      planned: "0,40 · MODELLED",
+      recorded: "0,60 · DERIVED",
     },
     {
-      label: "Varchi in pressione elevata",
-      planned: "≤ 1",
-      recorded: "1",
+      label: "Risultati KPI proiettati, sola lettura",
+      planned: "4",
+      recorded: "Etichette non disponibili",
     },
   ],
 };
 
 const evolutionFact: EvolutionFact = {
-  id: "EVO-PARKING-OUTCOME-001",
+  id: "EVO-RV03-BOUNDARY-001",
   occurredAt: "2026-07-18T20:45:00+02:00",
-  title: "L’indirizzamento anticipato riduce la pressione primaria",
+  title: "L’impatto reale resta sconosciuto",
   statement:
-    "L’esito registrato entra nel contesto dell’evento come nuova evidenza per successive valutazioni.",
+    "Gli output derivati non costituiscono prova causale, beneficio verificato o Learning automatico.",
 };
 
-export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
+export const RV03_CONTROLLED_STAGES: readonly StageSnapshot[] = immutable([
   {
     id: "STAGE-01-IDENTIFIED",
     key: "identified",
@@ -114,12 +110,12 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "identified",
       statusLabel: "Identificata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
     },
   },
   {
@@ -130,19 +126,19 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "accepted",
       statusLabel: "Accettata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "La pressione è rilevante e richiede una verifica coordinata prima di qualsiasi azione.",
+        "Passaggio dimostrativo; non attesta una valutazione operativa reale.",
     },
     governance: {
       currentStep: "Opportunità accettata",
-      accountableRole: "Responsabile operativo evento",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T16:48:00+02:00",
       statement:
         "L’opportunità entra nel percorso di governance per una valutazione operativa.",
@@ -156,22 +152,22 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "reviewed",
       statusLabel: "Revisionata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "L’area secondaria può assorbire parte degli arrivi; segnaletica e presidio risultano disponibili.",
+        "Revisione simulata; dettagli operativi non disponibili nei materiali RV-03.",
     },
     governance: {
       currentStep: "Opportunità revisionata",
-      accountableRole: "Coordinamento mobilità",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T17:02:00+02:00",
       statement:
-        "Capacità, accessi e responsabilità operative sono stati verificati.",
+        "La revisione è rappresentata nel percorso controllato; verifiche reali non eseguite.",
     },
   },
   {
@@ -182,22 +178,22 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "approved",
       statusLabel: "Approvata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "L’area secondaria può assorbire parte degli arrivi; segnaletica e presidio risultano disponibili.",
+        "Decisione governata dimostrata nel solo scenario controllato.",
     },
     governance: {
       currentStep: "Opportunità approvata e Missione pianificata",
-      accountableRole: "Direzione operativa",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T17:15:00+02:00",
       statement:
-        "La direzione approva l’intervento e assegna la Missione.",
+        "Lo scenario rappresenta una Decisione governata collegata a una Missione.",
     },
     mission: plannedMission,
   },
@@ -209,22 +205,22 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "approved",
       statusLabel: "Approvata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "L’area secondaria può assorbire parte degli arrivi; segnaletica e presidio risultano disponibili.",
+        "Transizione simulata; non attesta un avvio operativo reale.",
     },
     governance: {
       currentStep: "Missione avviata",
-      accountableRole: "Caposquadra Mobilità Nord",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T17:30:00+02:00",
       statement:
-        "Segnaletica dinamica e presidio del percorso secondario sono attivi.",
+        "La transizione di Missione è simulata; nessun intervento reale è attivo.",
     },
     mission: startedMission,
   },
@@ -236,22 +232,22 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "approved",
       statusLabel: "Approvata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "L’area secondaria può assorbire parte degli arrivi; segnaletica e presidio risultano disponibili.",
+        "Output derivato; non attesta il raggiungimento di un obiettivo reale.",
     },
     governance: {
-      currentStep: "Missione raggiunta",
-      accountableRole: "Caposquadra Mobilità Nord",
+      currentStep: "Output derivato",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T20:32:00+02:00",
       statement:
-        "Il target operativo è stato raggiunto e la Missione può essere verificata.",
+        "Il sistema ha prodotto output derivati; l’esecuzione reale non è verificata.",
     },
     mission: achievedMission,
   },
@@ -263,26 +259,26 @@ export const ROMA_SUMMER_LIVE_STAGES: readonly StageSnapshot[] = immutable([
     eventContext,
     situation,
     opportunity: {
-      id: "OPP-PARKING-DISTRIBUTION-001",
-      title: "Distribuire gli arrivi verso l’area secondaria",
+      id: "OPP-RV03-SELECTED",
+      title: "Private-Vehicle Arrival Window Staggering",
       status: "approved",
       statusLabel: "Approvata",
       rationale:
-        "Un indirizzamento anticipato può ridurre la concentrazione ai varchi senza modificare l’autorità decisionale degli operatori.",
-      owner: "Unità Mobilità Evento",
+        "Azione selezionata nello scenario controllato; efficacia reale e causalità non stabilite.",
+      owner: "Ruolo simulato non specificato",
       decisionNote:
-        "L’area secondaria può assorbire parte degli arrivi; segnaletica e presidio risultano disponibili.",
+        "Chiusura dimostrativa; nessuna ricevuta durevole di esecuzione è disponibile.",
     },
     governance: {
-      currentStep: "Esito registrato",
-      accountableRole: "Direzione operativa",
+      currentStep: "Output derivato",
+      accountableRole: "Ruolo simulato non specificato",
       recordedAt: "2026-07-18T20:45:00+02:00",
       statement:
-        "L’esito della Missione è registrato come nuova evidenza dell’evento.",
+        "L’output resta una proiezione controllata e non costituisce Learning automatico.",
     },
     mission: achievedMission,
     outcome,
     evolutionFact,
-    terminalStatus: "Percorso completato",
+    terminalStatus: "Percorso dimostrativo completato",
   },
 ]);

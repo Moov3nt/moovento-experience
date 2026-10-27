@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "REVEALUE comprende come evolvono i sistemi complessi per trasformare evidenze e relazioni in decisioni responsabili, azioni coordinate e apprendimento.",
+    "REVEALUE collega evidenze, interpretazione, decisioni governate, interventi ed effetti osservati per migliorare le decisioni nella mobilità dei grandi eventi e valutare il valore generato.",
 
   alternates: {
     canonical: "/",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     siteName: "REVEALUE",
     title: "REVEALUE | Event intelligence",
     description:
-      "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
+      "Event intelligence per la mobilità dei grandi eventi: evidenze, decisioni governate, interventi ed effetti osservati in un percorso tracciabile.",
     images: [
       {
         url: "/revealue-social.png",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "REVEALUE | Event intelligence",
     description:
-      "Comprendiamo come evolvono i sistemi complessi e trasformiamo le evidenze in decisioni responsabili, azioni coordinate e apprendimento.",
+      "Event intelligence per la mobilità dei grandi eventi: evidenze, decisioni governate, interventi ed effetti osservati in un percorso tracciabile.",
     images: {
       url: "/revealue-social.png",
       alt: "REVEALUE — Event Intelligence",

@@ -19,7 +19,7 @@ export default function CentralSequence() {
         id="metodo"
         ref={systemRef}
         aria-labelledby="central-sequence-system-title"
-        className="relative flex min-h-svh items-center overflow-hidden font-sans text-revealue-ivory"
+        className="relative flex min-h-[82svh] items-center overflow-hidden font-sans text-revealue-ivory"
       >
         <div className="mx-auto grid w-full max-w-[90rem] grid-cols-1 px-6 py-24 sm:px-10 sm:py-28 lg:grid-cols-12 lg:px-16 lg:py-32">
           <div className="max-w-3xl lg:col-span-7 lg:col-start-2">
@@ -35,7 +35,8 @@ export default function CentralSequence() {
             </h2>
 
             <p className="mt-12 max-w-xl text-[clamp(1.125rem,2vw,1.5rem)] font-light leading-relaxed text-revealue-mineral sm:mt-14">
-              Comprenderle cambia ciò che possiamo vedere.
+              Nella mobilità, arrivi, parcheggi, traffico, accessibilità,
+              accessi ed esperienza degli spettatori si influenzano a vicenda.
             </p>
           </div>
         </div>
@@ -44,7 +45,7 @@ export default function CentralSequence() {
       <section
         ref={relevanceRef}
         aria-labelledby="central-sequence-relevance-title"
-        className="relative flex min-h-svh items-center overflow-hidden font-sans text-revealue-ivory"
+        className="relative flex min-h-[82svh] items-center overflow-hidden font-sans text-revealue-ivory"
       >
         <div className="mx-auto grid w-full max-w-[90rem] grid-cols-1 px-6 py-24 sm:px-10 sm:py-28 lg:grid-cols-12 lg:px-16 lg:py-32">
           <div className="max-w-3xl lg:col-span-7 lg:col-start-2">
@@ -60,7 +61,8 @@ export default function CentralSequence() {
             </h2>
 
             <p className="mt-12 max-w-xl text-[clamp(1.125rem,2vw,1.5rem)] font-light leading-relaxed text-revealue-mineral sm:mt-14">
-              La rilevanza emerge dalle relazioni.
+              REVEALUE collega evidenze e interpretazione per rendere
+              confrontabili alternative e opportunità.
             </p>
           </div>
         </div>
@@ -69,7 +71,7 @@ export default function CentralSequence() {
       <section
         ref={actionRef}
         aria-labelledby="central-sequence-action-title"
-        className="relative flex min-h-svh items-center overflow-hidden font-sans text-revealue-ivory"
+        className="relative flex min-h-[82svh] items-center overflow-hidden font-sans text-revealue-ivory"
       >
         <div className="mx-auto grid w-full max-w-[90rem] grid-cols-1 px-6 py-24 sm:px-10 sm:py-28 lg:grid-cols-12 lg:px-16 lg:py-32">
           <div className="max-w-3xl lg:col-span-7 lg:col-start-2">
@@ -81,11 +83,12 @@ export default function CentralSequence() {
               id="central-sequence-action-title"
               className="mt-9 max-w-[14ch] text-[clamp(2.75rem,5vw,5rem)] font-light leading-[0.98] tracking-[-0.045em] text-balance"
             >
-              Capire dove agire.
+              Dalla Decisione governata all&apos;intervento.
             </h2>
 
             <p className="mt-12 max-w-xl text-[clamp(1.125rem,2vw,1.5rem)] font-light leading-relaxed text-revealue-mineral sm:mt-14">
-              La rilevanza diventa possibilità d&apos;intervento.
+              Responsabilità, Missione ed effetti osservati restano collegati
+              per sostenere la valutazione del valore.
             </p>
           </div>
         </div>
